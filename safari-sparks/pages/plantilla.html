@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Animal] - Safari Sparks | WonderColoring</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>WonderColoring</h1>
+        <a href="../../index.html">↩️ Volver a Colecciones</a>
+    </header>
+
+    <main class="animal-page">
+        <h2 class="animal-title">León Africano</h2>
+        <p class="scientific-name">Panthera leo</p>
+
+        <section class="visual-audio">
+            <div class="image-container">
+                <img src="../assets/img/leon.webp" alt="León coloreado de WonderColoring" class="animal-image">
+            </div>
+
+            <button class="audio-button" onclick="reproducirSonido('leon-sonido.mp3')">
+                <span class="icon">🔊</span> Escuchar Sonido
+            </button>
+        </section>
+
+        <section class="info-section">
+            <h3>Características Clave</h3>
+            <ul id="caracteristicas-list">
+                <li>Es el único felino que vive en manadas.</li>
+                <li>Los machos tienen una melena, las hembras no.</li>
+                </ul>
+        </section>
+
+        <section class="info-section">
+            <h3>Hechos Peculiares (¡Dato Curioso!)</h3>
+            <ul id="hechos-list">
+                <li>Un rugido puede escucharse hasta a 8 km de distancia.</li>
+                <li>Pasan la mayor parte del día durmiendo (hasta 20 horas).</li>
+                </ul>
+        </section>
+        
+        <a href="../../index.html" class="back-link">Explora otros animales y colecciones</a>
+    </main>
+
+    <script>
+      /**
+       * Reproduce el archivo de audio del animal.
+       * @param {string} nombreAudio - El nombre del archivo de audio (ej: 'leon-sonido.mp3').
+       */
+      function reproducirSonido(nombreAudio) {
+        // La ruta es relativa a la carpeta 'pages', por eso el '../'
+        const audio = new Audio(`../assets/audio/${nombreAudio}`);
+        audio.play();
+      }
+    </script>
+</body>
+</html>
