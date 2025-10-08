@@ -405,17 +405,31 @@ a {
 
     /* --- Navbar & Branding (Logo/Slogan) --- */
     .navbar {
-        /* Permite que el brand-container y el botón "Back" se apilen */
-        flex-direction: column; 
-        text-align: center;
-        gap: 10px; 
+        background-color: var(--color-beige); 
+        color: var(--color-brown);
+        padding: 15px 20px;
+        
+        /* Asegura que el navbar sea un contenedor flexible */
+        display: flex; 
+        
+        /* CAMBIO CLAVE: Centra el contenido del navbar */
+        justify-content: center; 
+        
+        align-items: center;
+        border-bottom: 3px solid var(--color-taupe); 
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
     }
     
     .brand-container {
-        /* Centra el logo y el texto de la marca */
+        /* CAMBIO CLAVE: Cambiamos de 'row' (línea) a 'column' (columna) */
         display: flex;
-        align-items: center;
-        gap: 15px;
+        flex-direction: column;
+        
+        /* Centra la imagen y el texto uno debajo del otro */
+        align-items: center; 
+        
+        /* Si lo necesitas para el index, elimina este margen o ajústalo */
+        margin-right: 10px; 
     }
 
     .brand-text h1 {
@@ -485,7 +499,6 @@ a {
 .reel-card {
     display: block; /* Para que el enlace funcione en toda la tarjeta */
     text-align: center;
-    position: relative; /* Clave para posicionar el texto flotante */
     overflow: hidden; /* Asegura que la imagen no se desborde */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
