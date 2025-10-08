@@ -48,9 +48,9 @@ a {
 .navbar {
     background-color: var(--color-beige); 
     color: var(--color-brown);
-    padding: 15px 20px;
+    padding: 15px 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-bottom: 3px solid var(--color-taupe); 
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
@@ -413,7 +413,9 @@ a {
     
     .brand-container {
         /* Centra el logo y el texto de la marca */
-        justify-content: center;
+        display: flex;
+        align-items: center;
+        gap: 15px;
     }
 
     .brand-text h1 {
@@ -467,66 +469,90 @@ a {
     }
 }
 /* ======================================================= */
-/* 10. FUTURE COLLECTIONS PREVIEW                          */
+/* 10. FUTURE COLLECTIONS: PREVIEW REEL STYLES             */
 /* ======================================================= */
 
-.collection-preview-grid {
-    /* Cuadrícula para mostrar 2 colecciones por fila en escritorio */
+.preview-reel-container {
+    /* Cuadrícula para mostrar 4 columnas grandes en escritorio */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 30px;
-    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 25px;
+    padding: 0 10px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
 }
 
-.future-collection-card {
+.reel-card {
+    display: block; /* Para que el enlace funcione en toda la tarjeta */
     text-align: center;
-    padding: 20px;
-    border: 2px dashed var(--color-pink-dust); /* Borde sutil que indica que aún no está lista */
-    border-radius: 8px;
-    background-color: var(--color-base);
+    position: relative; /* Clave para posicionar el texto flotante */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.future-collection-card h4 {
-    color: var(--color-taupe); /* Título de la futura colección */
-    font-size: 1.4em;
-    margin-bottom: 15px;
+.reel-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.book-visuals {
-    display: flex;
-    justify-content: center;
-    gap: 8px; /* Espacio entre la portada y la contraportada */
-    margin-bottom: 15px;
-}
-
-.book-cover {
-    width: 45%; /* Ambas miniaturas ocupan casi la mitad del espacio */
+.reel-cover {
+    width: 100%;
     height: auto;
-    border: 1px solid var(--color-taupe);
-    border-radius: 3px;
-    opacity: 0.8; /* Ligeramente opaco para indicar que es una vista previa */
+    display: block;
+    filter: brightness(0.8); /* Oscurece un poco la imagen para que el texto resalte */
+    transition: filter 0.3s;
 }
 
-/* Estilo para el estado de "Próximamente" */
-.status-badge {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 0.8em;
+.reel-card:hover .reel-cover {
+    filter: brightness(1); /* La imagen se ilumina al pasar el ratón */
+}
+
+.reel-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    color: white; /* Texto blanco para resaltar en la imagen oscura */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.reel-info h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: white;
+}
+
+/* --- ESTILOS DE ETIQUETAS DE ESTADO --- */
+.soon-tag, .available-tag {
+    display: block;
+    font-size: 0.75em;
     font-weight: bold;
-    border-radius: 15px;
-    background-color: var(--color-beige);
-    color: var(--color-terracotta);
-    border: 1px solid var(--color-terracotta);
+    padding: 5px 0;
+    margin-top: 5px;
+    color: var(--color-gold); /* Próximamente en color dorado/amarillo */
 }
 
-/* --- OPTIMIZACIÓN MÓVIL (Añadir al final de tu @media (max-width: 600px)) --- */
-@media (max-width: 600px) {
-    /* ... (Tu código existente) ... */
+.available-tag {
+    color: var(--color-terracotta); /* Disponible en color terracota */
+}
 
-    .collection-preview-grid {
-        /* En móvil, solo 1 colección por fila */
-        grid-template-columns: 1fr;
-        padding: 0;
-        gap: 20px;
+/* --- OPTIMIZACIÓN MÓVIL (Añadir a tu @media (max-width: 600px)) --- */
+@media (max-width: 600px) {
+    .preview-reel-container {
+        /* En móvil, solo 2 colecciones por fila para que sean legibles */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .reel-info h4 {
+        font-size: 0.9em;
+    }
+    .soon-tag, .available-tag {
+        font-size: 0.65em;
     }
 }
+
