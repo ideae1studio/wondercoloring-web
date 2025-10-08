@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pangolin - Safari Sparks | WonderColoring</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>WonderColoring</h1>
+        <a href="../../index.html">↩️ Back to Collections</a>
+    </header>
+
+    <main class="animal-page">
+        <h2 class="animal-title">Pangolin</h2>
+        <p class="scientific-name">Manis spp</p>
+
+        <section class="visual-audio">
+            <div class="image-container">
+                <img src="../assets/img/pangolin.webp" alt="Colored Pangolin from WonderColoring" class="animal-image">
+            </div>
+
+            <button class="audio-button" onclick="playSound('pangolin.mp3')">
+                <span class="icon">🔊</span> Hear the Sound
+            </button>
+        </section>
+
+        <section class="info-section">
+            <h3>Key Characteristics</h3>
+            <ul id="caracteristicas-list">
+                <li>Pangolins are the only mammals covered completely in large, hard scales made of keratin (the same stuff as your fingernails!)</li>
+                <li>When scared, they curl up into a tight, armored ball—a perfect defense against predators like lions.</li>
+                <li>They have incredibly long, sticky tongues that can be longer than their body, used to slurp up ants and termites.</li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <ul id="hechos-list">
+                <li>Sadly, Pangolins are the most trafficked mammal in the world, meaning they are very endangered.</li>
+                <li>A Pangolin's tongue attaches to its ribcage, not its throat, which is super unique!</li>
+                <li>They have no teeth and rely on stones and sand in their stomachs to grind up their food.</li>
+            </ul>
+        </section>
+        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+    </main>
+
+    <script>
+      /**
+       * Plays the animal's audio file.
+       * @param {string} audioName - The name of the audio file (e.g., 'lion.mp3').
+       */
+      function playSound(audioName) {
+        // The path is relative to the 'pages' folder, hence the '../'
+        const audio = new Audio(`../assets/audio/${audioName}`);
+        audio.play();
+      }
+    </script>
+     <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    </footer>
+</body>
+</html>

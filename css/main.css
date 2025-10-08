@@ -1,0 +1,532 @@
+/* ======================================================= */
+/* 1. ELEGANT COLOR PALETTE VARIABLES                      */
+/* ======================================================= */
+:root {
+    --color-base: #F8F5F0;        /* Light Cream/Off-White */
+    --color-beige: #EAD7C9;       /* Section Backgrounds */
+    --color-pink-dust: #D8B4B8;   /* Soft Accents / Hover */
+    --color-taupe: #A68A85;       /* Secondary Text / Borders */
+    --color-terracotta: #B26A65;  /* Main Action / Primary Title */
+    --color-brown: #4A3A34;       /* Main Body Text / Heading Contrast */
+    --color-gold: #D4AF37;        /* Luxury Details / Borders */
+}
+
+/* ======================================================= */
+/* 2. GENERAL STYLES & TYPOGRAPHY                          */
+/* ======================================================= */
+body {
+    /* Using a classic serif font for sophistication */
+    font-family: 'Georgia', serif; 
+    margin: 0;
+    background-color: var(--color-base); 
+    color: var(--color-brown); 
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Headings Consistency */
+h1, h2, h3, h4 {
+    font-weight: normal;
+    color: var(--color-brown);
+}
+
+/* Anchor Link Elegance */
+a {
+    transition: color 0.3s, opacity 0.3s;
+}
+
+
+/* ======================================================= */
+/* 3. NAVBAR & HEADER STYLES                               */
+/* ======================================================= */
+.navbar {
+    background-color: var(--color-beige); 
+    color: var(--color-brown);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-taupe); 
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 1.6em;
+    color: var(--color-gold); /* Brand Name in Gold */
+    letter-spacing: 1px;
+}
+
+.navbar a {
+    color: var(--color-taupe);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: var(--color-terracotta);
+}
+
+/* ======================================================= */
+/* 4. ANIMAL PAGE STYLES (Individual Pages)                */
+/* ======================================================= */
+.animal-title {
+    color: var(--color-terracotta); /* Main Animal Title in Terracotta */
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 2.2em;
+    padding-top: 10px;
+}
+
+.scientific-name {
+    text-align: center;
+    color: var(--color-taupe);
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+    /* Subtle Gold border for framing the image */
+    border: 3px solid var(--color-gold); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.animal-image {
+    width: 100%;
+    height: auto; 
+    display: block;
+}
+
+/* --- Info Sections --- */
+.info-section {
+    background-color: var(--color-beige); /* Section background in Beige */
+    padding: 25px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.info-section h3 {
+    color: var(--color-taupe); /* Section titles in Taupe */
+    border-bottom: 2px solid var(--color-pink-dust); 
+    padding-bottom: 5px;
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.info-section ul {
+    list-style: none; 
+    padding-left: 0;
+}
+
+.info-section li {
+    padding-left: 1.5em; 
+    text-indent: -1em;
+}
+
+/* Custom list marker for elegance */
+.info-section li::before {
+    content: "•"; 
+    color: var(--color-terracotta); 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1em; 
+    margin-right: 0.5em;
+}
+
+/* --- Action Button (Audio/Download) --- */
+.audio-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--color-base); 
+    background-color: var(--color-terracotta); /* Main Action Color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.audio-button:hover {
+    background-color: var(--color-pink-dust); 
+    color: var(--color-brown);
+    transform: translateY(-1px);
+}
+
+.audio-button .icon {
+    margin-right: 5px;
+}
+
+
+/* --- Secondary Link Style --- */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    color: var(--color-taupe);
+    text-decoration: none;
+    border: 1px solid var(--color-pink-dust);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: var(--color-pink-dust);
+    color: var(--color-brown);
+}
+
+/* ======================================================= */
+/* 5. INDEX PAGE STYLES                                    */
+/* ======================================================= */
+.hero {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    color: var(--color-terracotta);
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.book-card {
+    padding: 20px;
+    background-color: var(--color-base);
+    border: 2px solid var(--color-gold); /* Gold frame for the book */
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.book-card h4 {
+    font-size: 1.5em;
+    color: var(--color-taupe);
+    margin-bottom: 10px;
+}
+
+/* ======================================================= */
+/* 6. BONUS PAGE STYLES                                    */
+/* ======================================================= */
+.bonus-grid {
+    display: grid;
+    /* Grid layout: 2 columns on desktop, adapts to 1 column on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    background-color: var(--color-base); 
+    box-shadow: none;
+}
+
+.bonus-item {
+    background-color: white;
+    border: 1px solid var(--color-pink-dust);
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.bonus-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-beige);
+}
+
+.bonus-item p {
+    font-weight: bold;
+    color: var(--color-terracotta);
+    margin-bottom: 15px;
+}
+
+.download-button {
+    /* Uses main action style for primary focus */
+    display: block;
+    padding: 10px;
+    background-color: var(--color-taupe);
+    color: var(--color-base);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: var(--color-pink-dust);
+    color: var(--color-brown);
+}
+
+
+/* ======================================================= */
+/* 7. CERTIFICATE PAGE STYLES - MEJORADO                   */
+/* ======================================================= */
+.certificate-page-main {
+    max-width: 900px; 
+    padding: 20px;
+}
+
+.certificate-input-area {
+    padding: 30px;
+    text-align: center;
+    background-color: var(--color-beige);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#artist-name-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 15px 0 25px 0;
+    border: 2px solid var(--color-pink-dust);
+    border-radius: 8px;
+    font-size: 1.3em;
+    text-align: center;
+    color: var(--color-brown);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Contenedor principal del certificado que permite superponer texto */
+.certificate-print-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px; /* Asegura un tamaño consistente */
+    margin: 30px auto;
+    overflow: hidden; /* Evita desbordamientos */
+}
+
+.certificate-background-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos para el nombre superpuesto */
+.cert-name-overlay {
+    position: absolute;
+    top: 45%; /* Ajusta la posición vertical del nombre */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Brush Script MT', 'Bradley Hand', cursive; /* Fuente manuscrita */
+    font-size: 4.5em; /* Tamaño grande para el nombre */
+    color: var(--color-terracotta); /* Color del nombre */
+    text-align: center;
+    width: 80%; /* Ancho para el nombre */
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para que destaque */
+    white-space: nowrap; /* Evita que el nombre se corte */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Puntos suspensivos si el nombre es muy largo */
+}
+
+/* Estilos para la fecha superpuesta */
+.cert-date-overlay {
+    position: absolute;
+    bottom: 5%; /* Ajusta la posición vertical de la fecha */
+    right: 10%; /* Ajusta la posición horizontal de la fecha */
+    font-family: 'Georgia', serif;
+    font-size: 1.1em;
+    color: var(--color-brown);
+    white-space: nowrap;
+}
+
+
+/* --- Print Styles (MODIFICADO para solo el certificado) --- */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: none !important; /* Asegura fondo blanco */
+    }
+
+    /* Oculta todo excepto el contenedor del certificado */
+    .navbar, footer, .certificate-input-area, .audio-button, .back-link {
+        display: none !important;
+    }
+
+    /* Ajusta el área de visualización del certificado para impresión */
+    .certificate-page-main {
+        width: 100vw; /* Ocupa todo el ancho de la ventana de impresión */
+        height: 100vh; /* Ocupa todo el alto de la ventana de impresión */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .certificate-print-container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        max-width: none; /* No hay límite de ancho para impresión */
+        /* Asegura que la imagen de fondo cubra el contenedor */
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    /* Ajustes para el texto superpuesto en impresión */
+    .cert-name-overlay {
+        font-size: 4em; /* Ligeramente más pequeño para impresión */
+        top: 46%; /* Mantiene la misma posición relativa */
+    }
+    .cert-date-overlay {
+        font-size: 1em; /* Mantiene la misma posición relativa */
+        bottom: 5%;
+        right: 10%;
+    }
+}
+
+
+/* ======================================================= */
+/* 8. RESPONSIVENESS (Mobile Optimization)                 */
+/* ======================================================= */
+@media (max-width: 600px) {
+    /* --- General Layout --- */
+    main {
+        padding: 10px;
+    }
+
+    /* --- Navbar & Branding (Logo/Slogan) --- */
+    .navbar {
+        /* Permite que el brand-container y el botón "Back" se apilen */
+        flex-direction: column; 
+        text-align: center;
+        gap: 10px; 
+    }
+    
+    .brand-container {
+        /* Centra el logo y el texto de la marca */
+        justify-content: center;
+    }
+
+    .brand-text h1 {
+        font-size: 1.4em;
+        margin-bottom: 2px;
+    }
+    
+    .slogan {
+        font-size: 0.7em;
+        margin: 0;
+    }
+    
+    .navbar a {
+        /* Asegura que el botón de regreso sea visible */
+        font-size: 0.9em; 
+    }
+
+    /* --- Animal Pages --- */
+    .animal-title {
+        font-size: 1.8em;
+    }
+    
+    .audio-button {
+        font-size: 1em;
+        padding: 12px;
+    }
+    
+    /* --- Index Page --- */
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    /* --- Certificate Page (NUEVOS AJUSTES) --- */
+    /* Aseguramos que el nombre y la fecha se ajusten a la imagen del certificado */
+    .cert-name-overlay {
+        font-size: 2.5em; /* Tamaño del nombre reducido para móviles */
+        top: 45%; /* Mantiene posición relativa */
+        width: 90%;
+    }
+    
+    .cert-date-overlay {
+        font-size: 0.8em;
+        bottom: 5%; /* Posición de la fecha ajustada */
+        right: 10%;
+    }
+    
+    /* --- Bonus Page Grid --- */
+    .bonus-grid {
+        /* Fuerza la columna única para que las tarjetas se vean grandes */
+        grid-template-columns: 1fr; 
+    }
+}
+/* ======================================================= */
+/* 10. FUTURE COLLECTIONS PREVIEW                          */
+/* ======================================================= */
+
+.collection-preview-grid {
+    /* Cuadrícula para mostrar 2 colecciones por fila en escritorio */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.future-collection-card {
+    text-align: center;
+    padding: 20px;
+    border: 2px dashed var(--color-pink-dust); /* Borde sutil que indica que aún no está lista */
+    border-radius: 8px;
+    background-color: var(--color-base);
+}
+
+.future-collection-card h4 {
+    color: var(--color-taupe); /* Título de la futura colección */
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.book-visuals {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Espacio entre la portada y la contraportada */
+    margin-bottom: 15px;
+}
+
+.book-cover {
+    width: 45%; /* Ambas miniaturas ocupan casi la mitad del espacio */
+    height: auto;
+    border: 1px solid var(--color-taupe);
+    border-radius: 3px;
+    opacity: 0.8; /* Ligeramente opaco para indicar que es una vista previa */
+}
+
+/* Estilo para el estado de "Próximamente" */
+.status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: var(--color-beige);
+    color: var(--color-terracotta);
+    border: 1px solid var(--color-terracotta);
+}
+
+/* --- OPTIMIZACIÓN MÓVIL (Añadir al final de tu @media (max-width: 600px)) --- */
+@media (max-width: 600px) {
+    /* ... (Tu código existente) ... */
+
+    .collection-preview-grid {
+        /* En móvil, solo 1 colección por fila */
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 20px;
+    }
+}

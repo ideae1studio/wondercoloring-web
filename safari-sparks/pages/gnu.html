@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gnu - Safari Sparks | WonderColoring</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>WonderColoring</h1>
+        <a href="../../index.html">↩️ Back to Collections</a>
+    </header>
+
+    <main class="animal-page">
+        <h2 class="animal-title">Blue Wildebeest (Gnu)</h2>
+        <p class="scientific-name">Connochaetes taurinus</p>
+
+        <section class="visual-audio">
+            <div class="image-container">
+                <img src="../assets/img/gnu.webp" alt="Colored gnu from WonderColoring" class="animal-image">
+            </div>
+
+            <button class="audio-button" onclick="playSound('gnu.mp3')">
+                <span class="icon">🔊</span> Hear the Sound
+            </button>
+        </section>
+
+        <section class="info-section">
+            <h3>Key Characteristics</h3>
+            <ul id="caracteristicas-list">
+                <li>Wildebeests are also called 'Gnus' because of the strange sound they make!</li>
+                <li>They live in huge groups and are famous for the 'Great Migration,' moving thousands of miles across Africa.</li>
+                <li>They are built tough, with thick necks and strong legs for running from predators.</li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <ul id="hechos-list">
+                <li>The Great Migration involves up to 1.5 million Wildebeest, making it the largest animal movement on Earth!</li>
+                <li>Baby Wildebeest can stand up and run with the herd just minutes after being born.</li>
+                <li>They often follow Zebras on their migration because the Zebras eat the taller, rougher grasses, leaving the shorter, tastier grass for the Wildebeest.</li>
+            </ul>
+        </section>
+        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+    </main>
+
+    <script>
+      /**
+       * Plays the animal's audio file.
+       * @param {string} audioName - The name of the audio file (e.g., 'gnu.mp3').
+       */
+      function playSound(audioName) {
+        // The path is relative to the 'pages' folder, hence the '../'
+        const audio = new Audio(`../assets/audio/${audioName}`);
+        audio.play();
+      }
+    </script>
+     <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    </footer>
+</body>
+</html>

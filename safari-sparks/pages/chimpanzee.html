@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chimpanzee - Safari Sparks | WonderColoring</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>WonderColoring</h1>
+        <a href="../../index.html">↩️ Back to Collections</a>
+    </header>
+
+    <main class="animal-page">
+        <h2 class="animal-title">Chimpanzee</h2>
+        <p class="scientific-name">Pan troglodytes</p>
+
+        <section class="visual-audio">
+            <div class="image-container">
+                <img src="../assets/img/chimpanzee.webp" alt="Colored Chimpanzee from WonderColoring" class="animal-image">
+            </div>
+
+            <button class="audio-button" onclick="playSound('chimpanzee.mp3')">
+                <span class="icon">🔊</span> Hear the Sound
+            </button>
+        </section>
+
+        <section class="info-section">
+            <h3>Key Characteristics</h3>
+            <ul id="caracteristicas-list">
+                <li>Chimpanzees are one of our closest relatives; they share about 98% of their DNA with humans!</li>
+                <li>They are very intelligent and use 'tools' like stones to crack nuts and sticks to catch bugs.</li>
+                <li>Chimps communicate with each other using many different sounds, gestures, and facial expressions.</li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <ul id="hechos-list">
+                <li>"They build cozy nests high in the trees every single night to sleep safely.</li>
+                <li>Chimpanzees can learn sign language and even play video games with practice.</li>
+                <li>Their hands and feet are designed to easily grab things, helping them swing through trees</li>
+            </ul>
+        </section>
+        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+    </main>
+
+    <script>
+      /**
+       * Plays the animal's audio file.
+       * @param {string} audioName - The name of the audio file (e.g., 'chimpanzee.mp3').
+       */
+      function playSound(audioName) {
+        // The path is relative to the 'pages' folder, hence the '../'
+        const audio = new Audio(`../assets/audio/${audioName}`);
+        audio.play();
+      }
+    </script>
+     <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals Selfie - Safari Sparks | WonderColoring</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>WonderColoring</h1>
+        <a href="../../index.html">↩️ Back to Collections</a>
+    </header>
+
+    <main class="animal-page">
+        <h2 class="animal-title">Animal Selfie </h2>
+        <p class="scientific-name">Protect our Friends</p>
+
+        <section class="visual-audio">
+            <div class="image-container">
+                <img src="../assets/img/animalsselfie.webp" alt="Colored Selfie from WonderColoring" class="animal-image">
+            </div>
+
+            <button class="audio-button" onclick="playSound('animalsselfie.mp3')">
+                <span class="icon">🔊</span> Hear the Sound
+            </button>
+        </section>
+
+        <section class="info-section">
+            <h3>Conservation Message</h3>
+            <ul id="caracteristicas-list">
+                <li>We share this beautiful planet with these amazing animals.</li>
+                <li>It is our job to be their protectors and make sure they have a safe home.</li>
+                <li>By learning about them, you are already helping to save them!"</li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <ul id="hechos-list">
+                <li> Discuss one thing your family can do today to help wildlife, like recycling or learning about endangered species.</li>
+                <li> Every animal you colored is facing challenges like habitat loss. Your voice matters!</li>
+                <li>  Take a fun 'selfie' with your favorite colored page and share the beauty of the wild!</li>
+            </ul>
+        </section>
+        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+    </main>
+
+    <script>
+      /**
+       * Plays the animal's audio file.
+       * @param {string} audioName - The name of the audio file (e.g., 'selfie.mp3').
+       */
+      function playSound(audioName) {
+        // The path is relative to the 'pages' folder, hence the '../'
+        const audio = new Audio(`../assets/audio/${audioName}`);
+        audio.play();
+      }
+    </script>
+    <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    </footer>
+</body>
+</html>

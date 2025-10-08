@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mandrill - Safari Sparks | WonderColoring</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>WonderColoring</h1>
+        <a href="../../index.html">↩️ Back to Collections</a>
+    </header>
+
+    <main class="animal-page">
+        <h2 class="animal-title">Mandrill</h2>
+        <p class="scientific-name">Mandrillus sphinx</p>
+
+        <section class="visual-audio">
+            <div class="image-container">
+                <img src="../assets/img/mandrill.webp" alt="Colored Mandrill from WonderColoring" class="animal-image">
+            </div>
+
+            <button class="audio-button" onclick="playSound('mandrill.mp3')">
+                <span class="icon">🔊</span> Hear the Sound
+            </button>
+        </section>
+
+        <section class="info-section">
+            <h3>Key Characteristics</h3>
+            <ul id="caracteristicas-list">
+                <li>TMandrills are famous for having the most colorful face of any mammal, with bright blue, red, and white markings!</li>
+                <li>They are the largest species of monkey in the world and are very powerful.</li>
+                <li>Mandrills live in huge groups called 'hordes,' which can sometimes have hundreds of individuals.</li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <ul id="hechos-list">
+                <li>The colors on a Mandrill's face and rear are actually a form of camouflage in the dark rainforest undergrowth.</li>
+                <li>Males use their bright colors to show off their strength and health to females and other males.</li>
+                <li>Mandrills are omnivores, eating everything from fruits and seeds to insects and small reptiles.</li>
+            </ul>
+        </section>
+        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+    </main>
+
+    <script>
+      /**
+       * Plays the animal's audio file.
+       * @param {string} audioName - The name of the audio file (e.g., 'mandrill.mp3').
+       */
+      function playSound(audioName) {
+        // The path is relative to the 'pages' folder, hence the '../'
+        const audio = new Audio(`../assets/audio/${audioName}`);
+        audio.play();
+      }
+    </script>
+     <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    </footer>
+</body>
+</html>

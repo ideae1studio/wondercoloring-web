@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completion Certificate | WonderColoring</title>
+    <link rel="stylesheet" href="../../css/main.css"> </head>
+<body id="certificate-body">
+
+    <header class="navbar">
+        <div class="brand-container">
+            <img src="../../assets/img/logo.png" alt="WonderColoring Logo" class="site-logo"> 
+            <div class="brand-text">
+                <h1>WonderColoring</h1>
+                <p class="slogan">Digital Design & Visual Creativity</p>
+            </div>
+        </div>
+        <a href="../../index.html">↩️ Back to Collections</a>
+    </header>
+
+    <main class="certificate-page-main">
+        <div class="info-section certificate-input-area">
+            <h2 class="animal-title">🎉 Congratulations!</h2>
+            <p>Enter the name of the artist who completed the book:</p>
+            <input type="text" id="artist-name-input" placeholder="E.g., Sophia or Matthew">
+            <button class="audio-button" onclick="generateCertificate()">
+                Generate Certificate
+            </button>
+        </div>
+        
+        <div id="certificate-display-area" style="display: none;">
+            <div class="certificate-print-container">
+                <img src="../assets/img/certificate_background.png" alt="Safari Sparks Certificate Background" class="certificate-background-img">
+                <h1 id="printed-name" class="cert-name-overlay">...</h1>
+                <p id="printed-date" class="cert-date-overlay"></p>
+            </div>
+
+            <button class="audio-button print-button" onclick="printCertificate()">
+                🖨️ Print / Download Certificate
+            </button>
+            <button class="audio-button" style="background-color: var(--color-taupe);" onclick="resetCertificate()">
+                Change Name
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <p class="copyright-text">© 2025 Ideae. All rights reserved. | Digital Design & Visual Creativity</p>
+    </footer>
+
+    <script>
+        function generateCertificate() {
+            const name = document.getElementById('artist-name-input').value.trim();
+            if (name) {
+                document.getElementById('printed-name').textContent = name;
+                
+                const date = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                document.getElementById('printed-date').textContent = date;
+
+                document.querySelector('.certificate-input-area').style.display = 'none';
+                document.getElementById('certificate-display-area').style.display = 'block';
+
+                localStorage.setItem('wondercoloring_name', name);
+            } else {
+                alert('Please enter the child\'s name.');
+            }
+        }
+
+        function printCertificate() {
+            // Oculta temporalmente elementos que no deben imprimirse
+            document.body.classList.add('print-mode');
+            window.print();
+            document.body.classList.remove('print-mode');
+        }
+
+        function resetCertificate() {
+            document.querySelector('.certificate-input-area').style.display = 'block';
+            document.getElementById('certificate-display-area').style.display = 'none';
+            document.getElementById('artist-name-input').value = localStorage.getItem('wondercoloring_name') || ''; // Carga el nombre guardado si existe
+        }
+
+        window.onload = function() {
+            const savedName = localStorage.getItem('wondercoloring_name');
+            if (savedName) {
+                document.getElementById('artist-name-input').value = savedName;
+                
+            }
+        };
+        
+
+
+
+        
+    </script>
+</body>
+</html>

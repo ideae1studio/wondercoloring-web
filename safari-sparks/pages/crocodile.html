@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crocodile - Safari Sparks | WonderColoring</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>WonderColoring</h1>
+        <a href="../../index.html">↩️ Back to Collections</a>
+    </header>
+
+    <main class="animal-page">
+        <h2 class="animal-title">Crocodile</h2>
+        <p class="scientific-name">Nile Crocodile</p>
+
+        <section class="visual-audio">
+            <div class="image-container">
+                <img src="../assets/img/crocodile.webp" alt="Colored Lion from WonderColoring" class="animal-image">
+            </div>
+
+            <button class="audio-button" onclick="playSound('crocodile.mp3')">
+                <span class="icon">🔊</span> Hear the Sound
+            </button>
+        </section>
+
+        <section class="info-section">
+            <h3>Key Characteristics</h3>
+            <ul id="caracteristicas-list">
+                <li>Crocodiles are powerful reptiles that have been around for millions of years, living dinosaurs!</li>
+                <li>They have incredibly strong jaws and teeth, but the muscles that open their mouth are quite weak—a person can hold them shut with their hands!</li>
+                <li>They are ambush hunters, meaning they hide underwater and wait for prey to come close to the water's edge.</li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <ul id="hechos-list">
+                <li>Crocodiles can hold their breath underwater for a very long time, sometimes over an hour!</li>
+                <li>They swallow stones to help grind up their food in their stomachs and also to use as ballast (weights) for diving.</li>
+                <li>Crocodiles are great parents; the mother will carry her babies gently in her mouth to protect them.</li>
+            </ul>
+        </section>
+        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+    </main>
+
+    <script>
+      /**
+       * Plays the animal's audio file.
+       * @param {string} audioName - The name of the audio file (e.g., 'crocodile.mp3').
+       */
+      function playSound(audioName) {
+        // The path is relative to the 'pages' folder, hence the '../'
+        const audio = new Audio(`../assets/audio/${audioName}`);
+        audio.play();
+      }
+    </script>
+     <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    </footer>
+</body>
+</html>

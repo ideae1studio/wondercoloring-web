@@ -1,0 +1,53 @@
+[
+  {
+    "id": "lion",
+    "name_en": "African Lion",
+    "name_scientific": "Panthera leo",
+    "image_file": "lion.webp",
+    "audio_file": "lion-sound.mp3",
+    "characteristics": [
+      "Lions are the only cats that live in large social groups called 'prides'.",
+      "The male's distinctive mane helps protect his neck during fights.",
+      "They are the second-largest cat species in the world, after the tiger."
+    ],
+    "peculiar_facts": [
+      "A lion's powerful roar can be heard from as far as 5 miles (8 km) away.",
+      "Lions spend most of their time resting, sleeping up to 20 hours a day.",
+      "Lionesses do 90% of the pride's hunting."
+    ]
+  },
+  {
+    "id": "elephant",
+    "name_en": "African Elephant",
+    "name_scientific": "Loxodonta africana",
+    "image_file": "elephant.webp",
+    "audio_file": "elephant-sound.mp3",
+    "characteristics": [
+      "They are the world's largest land animals.",
+      "An elephant's trunk contains about 40,000 muscles.",
+      "Elephants are herbivores, eating roots, grasses, fruit, and bark."
+    ],
+    "peculiar_facts": [
+      "They communicate through deep rumbling sounds that are too low for humans to hear.",
+      "Elephants only sleep for about 2 to 3 hours a day.",
+      "Their large ears are used to radiate excess heat and keep them cool."
+    ]
+  },
+  {
+    "id": "zebra",
+    "name_en": "Plains Zebra",
+    "name_scientific": "Equus quagga",
+    "image_file": "zebra.webp",
+    "audio_file": "zebra-sound.mp3",
+    "characteristics": [
+      "Zebras are known for their distinctive black and white striped coats.",
+      "Each zebra's stripe pattern is unique, like a human fingerprint.",
+      "They live in large herds for protection against predators."
+    ],
+    "peculiar_facts": [
+      "No one knows for sure why zebras have stripes, but it may confuse biting flies or predators.",
+      "A group of zebras is called a 'dazzle'.",
+      "When a zebra is born, its stripes are brown and white."
+    ]
+  }
+]

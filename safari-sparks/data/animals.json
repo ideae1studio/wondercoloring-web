@@ -1,0 +1,461 @@
+[
+  {
+    "id": "lion",
+    "name_en": "African Lion",
+    "name_scientific": "Panthera leo",
+    "image_file": "lion.webp",
+    "audio_file": "lion-sound.mp3",
+    "characteristics": [
+      "The Lion is often called the 'King of the Jungle,' even though it mostly lives in the grasslands!",
+      "Lions are the only cats that live together in big families called 'prides'.",
+      "The male's awesome mane isn't just for looking cool; it helps protect his neck when he plays—or fights!"
+    ],
+    "peculiar_facts": [
+      "A lion's roar is so loud it can be heard up to 5 miles (8 km) away—that's farther than you can walk in an hour!",
+      "Lions are super lazy! They rest and sleep for up to 20 hours every day.",
+      "Most of the hunting is done by the powerful female lions, called lionesses."
+    ]
+  },
+  {
+    "id": "hippo",
+    "name_en": "Hippopotamus",
+    "name_scientific": "Hippopotamus amphibius",
+    "image_file": "hippo.webp",
+    "audio_file": "hippo-sound.mp3",
+    "characteristics": [
+      "Hippos spend almost all day cooling off in the water, only coming out at night to eat grass.",
+      "Even though they look chubby, Hippos are very fast runners, especially when they feel threatened!",
+      "Their skin makes a kind of pink, oily 'sunscreen' to keep them from getting sunburned."
+    ],
+    "peculiar_facts": [
+      "The Hippo's name means 'river horse' in Greek, but it's actually more closely related to pigs and whales!",
+      "Their teeth (canines) can grow up to 20 inches long—that's almost as long as your arm!",
+      "Baby hippos are born underwater, but they can swim to the surface right away to take a breath."
+    ]
+  },
+  {
+    "id": "meerkat",
+    "name_en": "Meerkat",
+    "name_scientific": "Suricata suricatta",
+    "image_file": "meerkat.webp",
+    "audio_file": "meerkat-sound.mp3",
+    "characteristics": [
+      "Meerkats live in groups called 'mobs' or 'gangs' and work together to survive.",
+      "They take turns standing tall as a 'sentry' or lookout to watch for danger, like eagles.",
+      "They teach their babies how to hunt scorpions and other creepy crawlies safely."
+    ],
+    "peculiar_facts": [
+      "When they get cold, meerkats sunbathe! They stand on their hind legs and face the sun to warm up their tummies.",
+      "Their black eye patches act like sunglasses, helping them see clearly in the bright desert sun.",
+      "A meerkat den can have many entrances and tunnels, almost like an underground castle!"
+    ]
+  },
+  {
+    "id": "chimpanzee",
+    "name_en": "Chimpanzee",
+    "name_scientific": "Pan troglodytes",
+    "image_file": "chimpanzee.webp",
+    "audio_file": "chimpanzee-sound.mp3",
+    "characteristics": [
+      "Chimpanzees are one of our closest relatives; they share about 98% of their DNA with humans!",
+      "They are very intelligent and use 'tools' like stones to crack nuts and sticks to catch bugs.",
+      "Chimps communicate with each other using many different sounds, gestures, and facial expressions."
+    ],
+    "peculiar_facts": [
+      "They build cozy nests high in the trees every single night to sleep safely.",
+      "Chimpanzees can learn sign language and even play video games with practice.",
+      "Their hands and feet are designed to easily grab things, helping them swing through trees."
+    ]
+  },
+  {
+    "id": "gnu",
+    "name_en": "Blue Wildebeest (Gnu)",
+    "name_scientific": "Connochaetes taurinus",
+    "image_file": "gnu.webp",
+    "audio_file": "gnu-sound.mp3",
+    "characteristics": [
+      "Wildebeests are also called 'Gnus' because of the strange sound they make!",
+      "They live in huge groups and are famous for the 'Great Migration,' moving thousands of miles across Africa.",
+      "They are built tough, with thick necks and strong legs for running from predators."
+    ],
+    "peculiar_facts": [
+      "The Great Migration involves up to 1.5 million Wildebeest, making it the largest animal movement on Earth!",
+      "Baby Wildebeest can stand up and run with the herd just minutes after being born.",
+      "They often follow Zebras on their migration because the Zebras eat the taller, rougher grasses, leaving the shorter, tastier grass for the Wildebeest."
+    ]
+  },
+  {
+    "id": "hyena",
+    "name_en": "Spotted Hyena",
+    "name_scientific": "Crocuta crocuta",
+    "image_file": "hyena.webp",
+    "audio_file": "hyena-sound.mp3",
+    "characteristics": [
+      "Hyenas are known for their giggle-like laugh, but this sound usually means they are excited or nervous!",
+      "They are amazing hunters and catch most of their food themselves, they aren't just scavengers.",
+      "They live in large, structured groups called 'clans' led by a strong female."
+    ],
+    "peculiar_facts": [
+      "A Hyena's jaws are one of the strongest in the animal kingdom—they can crush bones easily!",
+      "Their front legs are longer than their back legs, giving them a sloped back appearance.",
+      "Hyenas are excellent communicators, using different calls, postures, and smells to talk to their clan."
+    ]
+  },
+  {
+    "id": "pangolin",
+    "name_en": "Pangolin",
+    "name_scientific": "Manis spp.",
+    "image_file": "pangolin.webp",
+    "audio_file": "pangolin-sound.mp3",
+    "characteristics": [
+      "Pangolins are the only mammals covered completely in large, hard scales made of keratin (the same stuff as your fingernails!).",
+      "When scared, they curl up into a tight, armored ball—a perfect defense against predators like lions.",
+      "They have incredibly long, sticky tongues that can be longer than their body, used to slurp up ants and termites."
+    ],
+    "peculiar_facts": [
+      "Sadly, Pangolins are the most trafficked mammal in the world, meaning they are very endangered.",
+      "A Pangolin's tongue attaches to its ribcage, not its throat, which is super unique!",
+      "They have no teeth and rely on stones and sand in their stomachs to grind up their food."
+    ]
+  },
+  {
+    "id": "rhino",
+    "name_en": "Black Rhinoceros",
+    "name_scientific": "Diceros bicornis",
+    "image_file": "rhino.webp",
+    "audio_file": "rhino-sound.mp3",
+    "characteristics": [
+      "Rhinos are one of the oldest groups of mammals on Earth, often called 'living fossils'.",
+      "Despite their name, Black Rhinos are usually gray or brown, their color comes from the mud they roll in!",
+      "Their horn is made of keratin, the same material as human hair and fingernails."
+    ],
+    "peculiar_facts": [
+      "Rhinos love rolling in mud. This helps them cool down and protects their skin from bugs and the hot sun.",
+      "They have poor eyesight but an excellent sense of smell and hearing to help them navigate the bush.",
+      "Sadly, Black Rhinos are critically endangered due to poaching (illegal hunting) for their horns."
+    ]
+  },
+  {
+    "id": "ostrich",
+    "name_en": "Ostrich",
+    "name_scientific": "Struthio camelus",
+    "image_file": "ostrich.webp",
+    "audio_file": "ostrich-sound.mp3",
+    "characteristics": [
+      "The Ostrich is the world's largest and heaviest bird, but it cannot fly!",
+      "Instead of flying, they are amazing runners, using their large, powerful legs to escape danger.",
+      "They have only two toes on each foot—perfect for high-speed running on the African plains."
+    ],
+    "peculiar_facts": [
+      "Ostriches can run up to 43 mph (70 km/h)—that's faster than most cars are allowed to drive in a neighborhood!",
+      "Their eyes are the largest of any land animal, helping them spot predators from far away.",
+      "An Ostrich egg is the largest egg in the world, and it takes about 40 minutes to hard-boil one!"
+    ]
+  },
+  {
+    "id": "cheetah",
+    "name_en": "Cheetah",
+    "name_scientific": "Acinonyx jubatus",
+    "image_file": "cheetah.webp",
+    "audio_file": "cheetah-sound.mp3",
+    "characteristics": [
+      "The Cheetah is the fastest land animal on Earth, capable of running faster than a speeding car!",
+      "They have a small head, long, thin legs, and a very flexible spine, all built for speed.",
+      "Cheetahs have unique black 'tear lines' running from their eyes to their mouth, which help reflect the sun's glare while hunting."
+    ],
+    "peculiar_facts": [
+      "A Cheetah can go from 0 to 60 mph (97 km/h) in about three seconds—faster than most sports cars!",
+      "Unlike other large cats, Cheetahs cannot roar; they make a high-pitched sound called a 'chirp' or 'churr'.",
+      "Their long, heavy tail acts like a rudder on a boat, helping them steer and maintain balance during high-speed turns."
+    ]
+  },
+  {
+    "id": "baboon",
+    "name_en": "Baboon",
+    "name_scientific": "Papio spp.",
+    "image_file": "baboon.webp",
+    "audio_file": "baboon-sound.mp3",
+    "characteristics": [
+      "Baboons are one of the world's largest monkeys, easily recognized by their long, dog-like snout.",
+      "They are very social and live in large groups called 'troops,' sometimes with hundreds of members!",
+      "Baboons are smart and very good problem solvers, using teamwork to find food and stay safe."
+    ],
+    "peculiar_facts": [
+      "They can sleep high up in trees or on steep cliffs to stay safe from predators like leopards.",
+      "Baboons use over 30 different vocalizations, from soft grunts to loud alarm calls.",
+      "In some areas, Baboons have learned to open car doors and raid camping sites for food, showing off their intelligence!"
+    ]
+  },
+  {
+    "id": "blackmamba",
+    "name_en": "Black Mamba",
+    "name_scientific": "Dendroaspis polylepis",
+    "image_file": "blackmamba.webp",
+    "audio_file": "blackmamba-sound.mp3",
+    "characteristics": [
+      "The Black Mamba is one of the world's fastest and most feared snakes, known for its speed and powerful venom.",
+      "Despite its name, its skin is usually olive or gray; the name comes from the inky-black color inside its mouth.",
+      "Mambas are tree-dwelling but spend time hunting on the ground, often returning to the same den every night."
+    ],
+    "peculiar_facts": [
+      "They can grow up to 14 feet long and move at speeds up to 12.5 mph (20 km/h)—only a human can run faster!",
+      "If threatened, it displays a characteristic threat pose: flattening its neck into a hood and opening its black mouth wide.",
+      "They play a crucial role in their ecosystem by controlling rodent populations."
+    ]
+  },
+  {
+    "id": "crocodile",
+    "name_en": "Nile Crocodile",
+    "name_scientific": "Crocodylus niloticus",
+    "image_file": "crocodile.webp",
+    "audio_file": "crocodile-sound.mp3",
+    "characteristics": [
+      "Crocodiles are powerful reptiles that have been around for millions of years, living dinosaurs!",
+      "They have incredibly strong jaws and teeth, but the muscles that open their mouth are quite weak—a person can hold them shut with their hands!",
+      "They are ambush hunters, meaning they hide underwater and wait for prey to come close to the water's edge."
+    ],
+    "peculiar_facts": [
+      "Crocodiles can hold their breath underwater for a very long time, sometimes over an hour!",
+      "They swallow stones to help grind up their food in their stomachs and also to use as ballast (weights) for diving.",
+      "Crocodiles are great parents; the mother will carry her babies gently in her mouth to protect them."
+    ]
+  },
+  {
+    "id": "buffalo",
+    "name_en": "African Buffalo",
+    "name_scientific": "Syncerus caffer",
+    "image_file": "buffalo.webp",
+    "audio_file": "buffalo-sound.mp3",
+    "characteristics": [
+      "The African Buffalo is sometimes called 'Black Death' because it's considered one of the most dangerous animals in Africa.",
+      "They live in large herds and stick together, using their numbers to defend against lions.",
+      "Both males and females have large, heavy horns that are fused together across their foreheads, forming a helmet-like 'boss'."
+    ],
+    "peculiar_facts": [
+      "Buffalos are known for 'mobbing,' where the whole herd will attack a predator, even lions, to save a member.",
+      "They often follow birds called 'Oxpeckers,' which eat ticks and parasites from their skin, keeping them clean.",
+      "Buffaloes are picky eaters; they prefer to graze on tall, tough grass."
+    ]
+  },
+  {
+    "id": "secretarybird",
+    "name_en": "Secretarybird",
+    "name_scientific": "Sagittarius serpentarius",
+    "image_file": "secretarybird.webp",
+    "audio_file": "secretarybird-sound.mp3",
+    "characteristics": [
+      "The Secretarybird is a large bird of prey, easily recognized by its long legs and crest of black feathers.",
+      "It gets its name because the black feathers behind its head look like old-fashioned secretaries used to tuck pens behind their ears!",
+      "Unlike most birds of prey, the Secretarybird hunts mostly on the ground, walking long distances every day."
+    ],
+    "peculiar_facts": [
+      "This bird is famous for stomping on snakes with its powerful legs and feet, delivering a quick, strong blow.",
+      "Their long legs help them see over tall grasses and keep them safe from small predators.",
+      "They build huge nests, sometimes 5 feet wide, high up in acacia trees."
+    ]
+  },
+  {
+    "id": "gazelle",
+    "name_en": "Thomson's Gazelle",
+    "name_scientific": "Eudorcas thomsonii",
+    "image_file": "gazelle.webp",
+    "audio_file": "gazelle-sound.mp3",
+    "characteristics": [
+      "Gazelles are small, graceful antelopes known for their incredible speed and agility.",
+      "They have a distinctive black stripe running along their side, separating their light brown back from their white tummy.",
+      "When a gazelle senses danger, it performs a peculiar, bouncing run called 'stotting,' leaping high into the air with all four feet."
+    ],
+    "peculiar_facts": [
+      "A Thomson's Gazelle can run up to 40 mph (64 km/h) in zigzags to escape a Cheetah!",
+      "The stotting jump might be a signal to predators that the gazelle is healthy and too fast to catch.",
+      "They can survive for a long time without drinking water, getting all the moisture they need from the plants they eat."
+    ]
+  },
+  {
+    "id": "flamingo",
+    "name_en": "Flamingo",
+    "name_scientific": "Phoenicopterus spp.",
+    "image_file": "flamingo.webp",
+    "audio_file": "flamingo-sound.mp3",
+    "characteristics": [
+      "Flamingos are famous for their bright pink feathers, which come from the tiny shrimp and algae they eat!",
+      "They stand on one long, skinny leg to save body heat and let the other leg rest in the water.",
+      "Flamingos live in enormous groups called 'colonies' and build their nests out of mud."
+    ],
+    "peculiar_facts": [
+      "Baby flamingos are born gray or white; it takes a few years for them to turn pink.",
+      "They eat by holding their head upside down in the water, using their specialized beak like a filter to scoop up tiny food.",
+      "Flamingos can fly very long distances, sometimes traveling between lakes in one night."
+    ]
+  },
+  {
+    "id": "lemur",
+    "name_en": "Ring-Tailed Lemur",
+    "name_scientific": "Lemur catta",
+    "image_file": "lemur.webp",
+    "audio_file": "lemur-sound.mp3",
+    "characteristics": [
+      "Lemurs are primates (like monkeys) but are only found on the island of Madagascar, nowhere else in the world!",
+      "They are easily recognized by their long, black-and-white striped tail, which they use for balance and communication.",
+      "Lemurs love sunbathing! They sit with their arms spread wide to soak up the morning warmth."
+    ],
+    "peculiar_facts": [
+      "Lemur groups are led by the females—a rare thing in the primate world!",
+      "They have 'stink fights' by rubbing their tail on scent glands and waving their smelly tails at rivals.",
+      "Lemurs use their long tails to help them jump long distances between branches."
+    ]
+  },
+  {
+    "id": "gorilla",
+    "name_en": "Mountain Gorilla",
+    "name_scientific": "Gorilla beringei beringei",
+    "image_file": "gorilla.webp",
+    "audio_file": "gorilla-sound.mp3",
+    "characteristics": [
+      "Gorillas are the largest primates on Earth and are incredibly gentle giants.",
+      "They live in family groups led by a strong male called a 'Silverback' because of the stripe of silver hair on his back.",
+      "Gorillas are mostly peaceful vegetarians, eating lots of leaves, stems, and bamboo."
+    ],
+    "peculiar_facts": [
+      "Mountain Gorillas share about 98% of their DNA with humans, just like Chimpanzees.",
+      "When a Silverback beats his chest, it's usually a warning sign, not an act of aggression.",
+      "They build a new nest to sleep in every single night, folding branches and leaves into a comfortable bed."
+    ]
+  },
+  {
+    "id": "kudu",
+    "name_en": "Greater Kudu",
+    "name_scientific": "Tragelaphus strepsiceros",
+    "image_file": "kudu.webp",
+    "audio_file": "kudu-sound.mp3",
+    "characteristics": [
+      "The Greater Kudu is a majestic antelope known for its stunning, long, spiraled horns.",
+      "The males' horns can grow up to 6 feet long, making two and a half turns!",
+      "Kudus have large ears that help them hear the faintest sounds of predators nearby."
+    ],
+    "peculiar_facts": [
+      "Kudus are excellent jumpers and can leap over obstacles that are 8 feet high!",
+      "Their coat has thin white stripes that help them blend into the dappled shade of the trees, making them hard to spot.",
+      "When they get spooked, they let out a loud, deep bark that sounds similar to a dog."
+    ]
+  },
+  {
+    "id": "warthog",
+    "name_en": "African Warthog",
+    "name_scientific": "Phacochoerus africanus",
+    "image_file": "warthog.webp",
+    "audio_file": "warthog-sound.mp3",
+    "characteristics": [
+      "Warthogs are wild pigs with large, curved tusks and thick, warty skin on their face—which gives them their name!",
+      "They live in burrows, often taking over holes dug by other animals like Aardvarks.",
+      "Warthogs eat a lot of grass and roots, using their tough snouts to dig them out of the ground."
+    ],
+    "peculiar_facts": [
+      "When they run, Warthogs stick their thin tails straight up in the air, like little flags!",
+      "They enter their burrows backward so they can use their tusks to defend the entrance if needed.",
+      "Warthogs love to kneel on their front legs while eating, using their tough noses as support."
+    ]
+  },
+  {
+    "id": "dikdik",
+    "name_en": "Dik-Dik",
+    "name_scientific": "Madoqua spp.",
+    "image_file": "dikdik.webp",
+    "audio_file": "dikdik-sound.mp3",
+    "characteristics": [
+      "The Dik-Dik is one of the smallest antelopes in Africa, usually only about 12-16 inches tall—about the size of a rabbit!",
+      "They are named for the distinctive 'zik-zik' or 'dik-dik' alarm sound they make when they feel scared.",
+      "Dik-Diks are monogamous, meaning they mate for life and live in small pairs."
+    ],
+    "peculiar_facts": [
+      "They use tear glands near their eyes to mark their territory with a scent.",
+      "They are so tiny that sometimes they can be mistaken for baby animals, but they are fully grown!",
+      "Dik-Diks rarely need to drink water, as they get most of their hydration from the leaves and berries they eat."
+    ]
+  },
+  {
+    "id": "mandrill",
+    "name_en": "Mandrill",
+    "name_scientific": "Mandrillus sphinx",
+    "image_file": "mandrill.webp",
+    "audio_file": "mandrill-sound.mp3",
+    "characteristics": [
+      "Mandrills are famous for having the most colorful face of any mammal, with bright blue, red, and white markings!",
+      "They are the largest species of monkey in the world and are very powerful.",
+      "Mandrills live in huge groups called 'hordes,' which can sometimes have hundreds of individuals."
+    ],
+    "peculiar_facts": [
+      "The colors on a Mandrill's face and rear are actually a form of camouflage in the dark rainforest undergrowth.",
+      "Males use their bright colors to show off their strength and health to females and other males.",
+      "Mandrills are omnivores, eating everything from fruits and seeds to insects and small reptiles."
+    ]
+  },
+  {
+    "id": "zebra",
+    "name_en": "Plains Zebra",
+    "name_scientific": "Equus quagga",
+    "image_file": "zebra.webp",
+    "audio_file": "zebra-sound.mp3",
+    "characteristics": [
+      "Zebras are known for their unique black and white stripes—no two Zebras have the exact same pattern!",
+      "They travel in massive groups called 'dazzles,' which confuse predators like lions and hyenas.",
+      "Zebras use their stripes to help regulate their body temperature in the hot African sun."
+    ],
+    "peculiar_facts": [
+      "Scientists think the stripes might help confuse biting flies and mosquitoes, keeping them away from the Zebra.",
+      "When a baby Zebra is born, its stripes are actually brown and white, not black and white!",
+      "Zebras have very strong kicks and will use them fiercely to defend themselves from danger."
+    ]
+  },
+  {
+    "id": "elephant",
+    "name_en": "African Bush Elephant",
+    "name_scientific": "Loxodonta africana",
+    "image_file": "elephant.webp",
+    "audio_file": "elephant-sound.mp3",
+    "characteristics": [
+      "The African Elephant is the largest land animal on Earth, weighing as much as three cars!",
+      "Their long trunk is like a super-powered hand: they use it to drink, breathe (snorkel!), shower, and pick up tiny food.",
+      "Elephant herds are led by the oldest and wisest female, called the 'Matriarch'."
+    ],
+    "peculiar_facts": [
+      "An elephant's ears are HUGE! They flap them like fans to cool down their body in the hot African climate.",
+      "They can communicate over long distances using low rumbling sounds that are too low for humans to hear.",
+      "Elephants are highly emotional and have been observed mourning their dead loved ones."
+    ]
+  },
+  {
+    "id": "challenge",
+    "name_en": "Hidden Jungle Challenge!",
+    "name_scientific": "Find the next coloring adventure!",
+    "image_file": "magnifying_glass.webp",
+    "audio_file": "jungle-music.mp3",
+    "characteristics": [
+      "Every great explorer knows that a journey ends only when a new one begins.",
+      "The amazing work you've done on the 'Safari Sparks' collection shows your dedication and talent.",
+      "Your curiosity and creativity are your greatest tools for discovery!"
+    ],
+    "peculiar_facts": [
+      "**Motivation:** Never stop looking for new things to learn, color, and imagine.",
+      "**Challenge:** Can you find the hidden link that takes you to your next collection?",
+      "**Remember:** A true artist always seeks the next masterpiece! Go shine!"
+    ]
+  },
+  {
+    "id": "selfie",
+    "name_en": "Animal Selfie!",
+    "name_scientific": "Protect our Friends!",
+    "image_file": "camera.webp",
+    "audio_file": "happy-music.mp3",
+    "characteristics": [
+      "**Conservation Message:** We share this beautiful planet with these amazing animals.",
+      "It is our job to be their protectors and make sure they have a safe home.",
+      "By learning about them, you are already helping to save them!"
+    ],
+    "peculiar_facts": [
+      "**Parental Tip:** Discuss one thing your family can do today to help wildlife, like recycling or learning about endangered species.",
+      "**Future Focus:** Every animal you colored is facing challenges like habitat loss. Your voice matters!",
+      "**Action:** Take a fun 'selfie' with your favorite colored page and share the beauty of the wild!"
+    ]
+  }
+]
