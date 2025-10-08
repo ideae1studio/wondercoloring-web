@@ -1,0 +1,48 @@
+# Nombre del flujo de trabajo que aparecerá en la pestaña 'Actions' de GitHub
+name: Deploy Safari Sparks
+
+# Define cuándo se ejecutará el flujo de trabajo: al hacer push a la rama principal
+on:
+  push:
+    branches:
+      - main
+  # Permite ejecutar este flujo de trabajo manualmente desde la pestaña 'Actions'
+  workflow_dispatch:
+
+# Define los permisos necesarios
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Define los trabajos (jobs) que se ejecutarán
+jobs:
+  # El trabajo de despliegue
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # Paso 1: Descarga el código del repositorio
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Paso 2: Configura GitHub Pages para usar la carpeta safari-sparks
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        with:
+          # ¡La clave está aquí! Especificamos la carpeta que contiene el sitio web
+          static_site_root: 'safari-sparks' 
+          
+      # Paso 3: Sube el artifact (el contenido de la carpeta)
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Sube la carpeta que definimos en static_site_root
+          path: 'safari-sparks' 
+
+      # Paso 4: Despliega el sitio
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
