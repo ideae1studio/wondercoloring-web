@@ -3,11 +3,11 @@
 /* ======================================================= */
 :root {
     --color-base: #F8F5F0;        /* Light Cream/Off-White */
-    --color-beige: #EAD7C9;       /* Section Backgrounds */
-    --color-pink-dust: #D8B4B8;   /* Soft Accents / Hover */
+    --color-beige: #e9dcd3;       /* Section Backgrounds */
+    --color-pink-dust: #e7c4c8;   /* Soft Accents / Hover */
     --color-taupe: #A68A85;       /* Secondary Text / Borders */
-    --color-terracotta: #B26A65;  /* Main Action / Primary Title */
-    --color-brown: #4A3A34;       /* Main Body Text / Heading Contrast */
+    --color-terracotta: #a12047;  /* Main Action / Primary Title */
+    --color-brown: #460127;       /* Main Body Text / Heading Contrast */
     --color-gold: #D4AF37;        /* Luxury Details / Borders */
 }
 
@@ -565,7 +565,7 @@ a {
 
     /* Los estilos de texto del brand */
     .brand-text h1 {
-        font-size: 1.4em;
+        font-size: 1.5em;
         margin-bottom: 2px;
     }
     
