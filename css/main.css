@@ -43,76 +43,74 @@ a {
 
 
 /* ======================================================= */
-/* 3. NAVBAR & HEADER STYLES                               */
+/* 3. NAVBAR & HEADER STYLES - CONSOLIDADO                 */
 /* ======================================================= */
 .navbar {
-    background-color: var(--color-brown); /* Fondo oscuro: el color más oscuro de tu paleta */
+    background-color: var(--color-brown); 
     padding: 15px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center; /* Centramos el contenido de la cabecera */
+    justify-content: center; 
     align-items: center;
 }
-/* Contenedor del Logo/Título */
+
+/* Contenedor principal que centra el logo/texto */
 .brand-container {
     max-width: 1200px;
     width: 100%;
-    /* Quitamos el flex/grid si lo tiene, para que .brand-visuals lo maneje */
+    margin: 0 auto;
 }
-/* Nuevo Contenedor para el Efecto Visual */
+
+/* Flex container para el logo y el texto (lado a lado) */
 .brand-visuals {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra el logo y texto dentro del navbar */
-    padding: 15px 30px;
-    
-    /* Marco Dorado */
-    border: 3px solid var(--color-gold); 
-    border-radius: 8px;
-    
-    /* Para dar el mismo color de fondo que el navbar, o si quieres un ligero contraste: */
-    background-color: var(--color-brown); 
 }
 
-/* El logo en sí */
+/* El Marco Dorado alrededor del Logo */
+.logo-wrapper {
+    border: 3px solid var(--color-gold); 
+    border-radius: 8px;
+    padding: 0px; /* 💡 OPTIMIZACIÓN: Añadir padding para que el marco no "apriete" el logo */
+    background-color: var(--color-brown);
+    margin-right: 30px; /* 💡 OPTIMIZACIÓN: Espaciado consistente */
+    flex-shrink: 0; 
+    flex-grow: 0;
+}
+
 .site-logo {
-    max-height: 80px; /* Ajusta este valor al tamaño ideal de tu logo */
+    max-height: 80px; 
     width: auto;
-    margin-right: 20px;
+    display: block; 
 }
 
 /* Contenedor del Texto (Título y Eslogan) */
 .brand-text {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; 
 }
 
-/* Título de la Marca */
+/* Título de la Marca (Estilo Principal) */
 .brand-text h1 {
-    color: var(--color-gold); /* El título de la marca debe mantenerse dorado */
+    color: var(--color-gold); 
     margin: 0;
     font-size: 2.2em;
     line-height: 1.1;
 }
 
-/* El Eslogan: El elemento CLAVE que debe resaltar */
+/* El Eslogan */
 .brand-text .slogan {
     margin: 0;
     font-size: 1em;
     font-weight: 500;
-    
-    /* Elegimos el color Rosa Suave para que resalte sobre el Marrón Oscuro */
     color: var(--color-pink-dust); 
-    /* Si prefieres blanco puro, usa: color: white; */
 }
 
+/* ❌ DUPLICADO ELIMINADO: Se eliminó el selector .navbar h1 repetido. */
 
-    .navbar h1 {
-    margin: 0;
-    font-size: 1.6em;
-    color: var(--color-gold); /* Brand Name in Gold */
-    letter-spacing: 1px;
-}
-
+/* Estilos de Enlaces Globales (Si existieran en el header) */
 .navbar a {
     color: var(--color-taupe);
     text-decoration: none;
@@ -538,65 +536,34 @@ a {
 /* 8. RESPONSIVENESS (Mobile Optimization)                 */
 /* ======================================================= */
 @media (max-width: 600px) {
-    /* --- General Layout --- */
+    
+    /* --- General Layout & Navbar --- */
     main {
         padding: 10px;
     }
-     .navbar {
+    .navbar {
         padding: 10px 5px;
     }
+
+    /* --- Header (Logo/Slogan) --- */
     .brand-visuals {
-        flex-direction: column; /* Apilamos logo y texto en móvil */
-        text-align: center;
-        padding: 10px 15px;
-        border: 2px solid var(--color-gold); /* Marco más delgado en móvil */
+        /* 💥 Soluciona conflicto: Apila y CENTRA horizontalmente todo el bloque */
+        flex-direction: column; 
+        align-items: left; 
     }
+    
+    .logo-wrapper {
+        margin-right: 0; 
+        margin-bottom: 10px; 
+        padding: 0px; /* Pequeño padding alrededor del logo dentro del marco */
+        border: 3px solid var(--color-gold); 
+    }
+    
     .site-logo {
-        max-height: 60px;
-        margin-right: 0;
-        margin-bottom: 8px;
-    }
-    .brand-text h1 {
-        font-size: 1.6em;
-    }
-    .brand-text .slogan {
-        font-size: 0.9em;
-    }
-    /* --- Navbar & Branding (Logo/Slogan) --- */
-   /* .navbar {
-        background-color: var(--color-beige); 
-        color: var(--color-brown);
-        padding: 15px 20px;
-        
-        
-        display: flex; 
-        
-        
-        justify-content: center; 
-        
-        align-items: center;
-        border-bottom: 3px solid var(--color-taupe); 
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-    }*/
-    /* Estilo para el texto de instrucción clave (opcional) */
-.hero p {
-    max-width: 700px; /* Limita el ancho del texto para mejor lectura */
-    margin: 0 auto 20px auto;
-    padding: 0 10px;
-}
-
-    .brand-container {
-        /* CAMBIO CLAVE: Cambiamos de 'row' (línea) a 'column' (columna) */
-        display: flex;
-        flex-direction: column;
-        
-        /* Centra la imagen y el texto uno debajo del otro */
-        align-items: center; 
-        
-        /* Si lo necesitas para el index, elimina este margen o ajústalo */
-        margin-right: 10px; 
+        max-height: 80px;
     }
 
+    /* Los estilos de texto del brand */
     .brand-text h1 {
         font-size: 1.4em;
         margin-bottom: 2px;
@@ -606,21 +573,25 @@ a {
         font-size: 0.7em;
         margin: 0;
     }
-    
+
     .navbar a {
-        /* Asegura que el botón de regreso sea visible */
         font-size: 0.9em; 
     }
-    /* --- Index Page Grid --- */
+    
+    /* --- Index Page & Hero --- */
+    .hero h2 {
+        font-size: 2em;
+    }
+
     .collection-grid {
-        /* Muestra 3 columnas en móvil */
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
     }
 
     .grid-link h4 {
-        font-size: 0.7em; /* Texto más pequeño para no ocupar demasiado */
+        font-size: 0.7em;
     }
+
     /* --- Animal Pages --- */
     .animal-title {
         font-size: 1.8em;
@@ -630,29 +601,22 @@ a {
         font-size: 1em;
         padding: 12px;
     }
-    
-    /* --- Index Page --- */
-    .hero h2 {
-        font-size: 2em;
-    }
 
-    /* --- Certificate Page (NUEVOS AJUSTES) --- */
-    /* Aseguramos que el nombre y la fecha se ajusten a la imagen del certificado */
+    /* --- Certificate Page --- */
     .cert-name-overlay {
-        font-size: 2.5em; /* Tamaño del nombre reducido para móviles */
-        top: 45%; /* Mantiene posición relativa */
+        font-size: 2.5em; 
+        top: 45%; 
         width: 90%;
     }
     
     .cert-date-overlay {
         font-size: 0.8em;
-        bottom: 5%; /* Posición de la fecha ajustada */
+        bottom: 5%; 
         right: 10%;
     }
     
     /* --- Bonus Page Grid --- */
     .bonus-grid {
-        /* Fuerza la columna única para que las tarjetas se vean grandes */
         grid-template-columns: 1fr; 
     }
 }
