@@ -22,8 +22,9 @@
                 <img src="../assets/img/mandrill.webp" alt="Colored Mandrill from WonderColoring" class="animal-image">
             </div>
 
-            <button class="audio-button" onclick="playSound('mandrill.mp3')">
-                <span class="icon">🔊</span> Hear the Sound
+            <button class="audio-button" id="play-sound-button" onclick="playSound('../assets/audio/lion.mp3')">
+                <span class="icon">🔊</span>
+                <span id="button-text">Listen to the animal sound!</span>
             </button>
         </section>
 
@@ -61,5 +62,6 @@
      <footer>
         <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
     </footer>
+    <script src="../../js/audio-logic.js"></script> 
 </body>
 </html>

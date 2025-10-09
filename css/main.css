@@ -170,7 +170,22 @@ a {
 .audio-button .icon {
     margin-right: 5px;
 }
+/* Estilo que aplicaremos cuando el audio esté cargando o reproduciéndose */
+.audio-button.is-playing,
+.audio-button.is-loading {
+    background-color: var(--color-gold); /* Cambia el color principal */
+    color: var(--color-brown); 
+    cursor: default;
+    /* Elimina la animación de elevación cuando está activo */
+    transform: none; 
+}
 
+/* Evita el hover cuando está activo */
+.audio-button.is-playing:hover,
+.audio-button.is-loading:hover {
+    background-color: var(--color-gold); 
+    color: var(--color-brown);
+}
 
 /* --- Secondary Link Style --- */
 .back-link {

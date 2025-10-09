@@ -22,11 +22,13 @@
                 <img src="../assets/img/african-buffalo.webp" alt="Colored Lion from WonderColoring" class="animal-image">
             </div>
 
-            <button class="audio-button" onclick="playSound('african-buffalo.mp3')">
-                <span class="icon">🔊</span> Hear the Sound
+            <button class="audio-button" id="play-sound-button" onclick="playSound('ruta/a/tu/sonido.mp3')">
+                <span class="icon">🔊</span>
+                <span id="button-text">Listen to the animal sound!</span>
             </button>
+        
         </section>
-
+       
         <section class="info-section">
             <h3>Key Characteristics</h3>
             <ul id="caracteristicas-list">
@@ -61,5 +63,7 @@
      <footer>
         <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
     </footer>
+
+<script src="../../js/audio-logic.js"></script>
 </body>
 </html>
