@@ -46,17 +46,67 @@ a {
 /* 3. NAVBAR & HEADER STYLES                               */
 /* ======================================================= */
 .navbar {
-    background-color: var(--color-beige); 
-    color: var(--color-brown);
-    padding: 15px 30px;
+    background-color: var(--color-brown); /* Fondo oscuro: el color más oscuro de tu paleta */
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centramos el contenido de la cabecera */
     align-items: center;
-    border-bottom: 3px solid var(--color-taupe); 
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+/* Contenedor del Logo/Título */
+.brand-container {
+    max-width: 1200px;
+    width: 100%;
+    /* Quitamos el flex/grid si lo tiene, para que .brand-visuals lo maneje */
+}
+/* Nuevo Contenedor para el Efecto Visual */
+.brand-visuals {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el logo y texto dentro del navbar */
+    padding: 15px 30px;
+    
+    /* Marco Dorado */
+    border: 3px solid var(--color-gold); 
+    border-radius: 8px;
+    
+    /* Para dar el mismo color de fondo que el navbar, o si quieres un ligero contraste: */
+    background-color: var(--color-brown); 
 }
 
-.navbar h1 {
+/* El logo en sí */
+.site-logo {
+    max-height: 80px; /* Ajusta este valor al tamaño ideal de tu logo */
+    width: auto;
+    margin-right: 20px;
+}
+
+/* Contenedor del Texto (Título y Eslogan) */
+.brand-text {
+    text-align: center;
+}
+
+/* Título de la Marca */
+.brand-text h1 {
+    color: var(--color-gold); /* El título de la marca debe mantenerse dorado */
+    margin: 0;
+    font-size: 2.2em;
+    line-height: 1.1;
+}
+
+/* El Eslogan: El elemento CLAVE que debe resaltar */
+.brand-text .slogan {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 500;
+    
+    /* Elegimos el color Rosa Suave para que resalte sobre el Marrón Oscuro */
+    color: var(--color-pink-dust); 
+    /* Si prefieres blanco puro, usa: color: white; */
+}
+
+
+    .navbar h1 {
     margin: 0;
     font-size: 1.6em;
     color: var(--color-gold); /* Brand Name in Gold */
@@ -492,23 +542,42 @@ a {
     main {
         padding: 10px;
     }
-
+     .navbar {
+        padding: 10px 5px;
+    }
+    .brand-visuals {
+        flex-direction: column; /* Apilamos logo y texto en móvil */
+        text-align: center;
+        padding: 10px 15px;
+        border: 2px solid var(--color-gold); /* Marco más delgado en móvil */
+    }
+    .site-logo {
+        max-height: 60px;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    .brand-text h1 {
+        font-size: 1.6em;
+    }
+    .brand-text .slogan {
+        font-size: 0.9em;
+    }
     /* --- Navbar & Branding (Logo/Slogan) --- */
-    .navbar {
+   /* .navbar {
         background-color: var(--color-beige); 
         color: var(--color-brown);
         padding: 15px 20px;
         
-        /* Asegura que el navbar sea un contenedor flexible */
+        
         display: flex; 
         
-        /* CAMBIO CLAVE: Centra el contenido del navbar */
+        
         justify-content: center; 
         
         align-items: center;
         border-bottom: 3px solid var(--color-taupe); 
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-    }
+    }*/
     /* Estilo para el texto de instrucción clave (opcional) */
 .hero p {
     max-width: 700px; /* Limita el ancho del texto para mejor lectura */
