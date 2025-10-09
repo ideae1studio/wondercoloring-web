@@ -196,14 +196,39 @@ a {
 .hero {
     padding: 40px 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column; /* Apila el contenido y la imagen */
+    align-items: center; /* Centra todo */
 }
 
 .hero h2 {
     color: var(--color-terracotta);
-    font-size: 2.5em;
-    margin-bottom: 15px;
+    font-size: 2.8em;
+    margin-bottom: 10px;
 }
-
+/* Contenedor de la Imagen para darle un marco */
+.hero-image-container {
+    max-width: 600px; /* Limita el tamaño de la imagen en escritorio */
+    width: 100%;
+    margin-top: 30px;
+    
+    /* Efecto de marco elegante */
+    border: 5px solid var(--color-gold); 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+/* Estilo para el texto de instrucción clave (opcional) */
+.hero p {
+    max-width: 700px; /* Limita el ancho del texto para mejor lectura */
+    margin: 0 auto 20px auto;
+    padding: 0 10px;
+}
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 .book-card {
     padding: 20px;
     background-color: var(--color-base);
@@ -217,7 +242,57 @@ a {
     color: var(--color-taupe);
     margin-bottom: 10px;
 }
+/* Estilos para el contenedor de la cuadrícula */
+.collection-grid {
+    display: grid;
+    /* 5 columnas por defecto para escritorio (ej: 5x5 + 2 especiales) */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px;
+    padding: 20px 0;
+}
+/* Estilos de cada tarjeta de animal */
+.grid-link {
+    /* CAMBIO CLAVE: Usa flex para centrar la imagen y el texto */
+    display: flex;
+    flex-direction: column; /* Apila los elementos (imagen encima, texto debajo) */
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    
+    /* Fondo claro con borde sutil */
+    background-color: var(--color-base); 
+    border: 1px solid var(--color-pink-dust);
+    
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
 
+.grid-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-terracotta); /* Resalta al pasar el ratón */
+}
+
+/* Estilos para las miniaturas de imagen */
+.grid-link img {
+    width: 100%;
+    /* Asegura que la imagen sea cuadrada si es necesario, o usa aspect-ratio */
+    height: auto; 
+    border-radius: 4px;
+    margin-bottom: 5px;
+    /* Borde sutil */
+    border: 2px solid var(--color-beige); 
+}
+
+/* Estilo para el nombre del animal (usando h4) */
+.grid-link h4 {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--color-brown);
+    font-weight: bold;
+}
 /* ======================================================= */
 /* 6. BONUS PAGE STYLES                                    */
 /* ======================================================= */
@@ -419,7 +494,13 @@ a {
         border-bottom: 3px solid var(--color-taupe); 
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
     }
-    
+    /* Estilo para el texto de instrucción clave (opcional) */
+.hero p {
+    max-width: 700px; /* Limita el ancho del texto para mejor lectura */
+    margin: 0 auto 20px auto;
+    padding: 0 10px;
+}
+
     .brand-container {
         /* CAMBIO CLAVE: Cambiamos de 'row' (línea) a 'column' (columna) */
         display: flex;
@@ -446,7 +527,16 @@ a {
         /* Asegura que el botón de regreso sea visible */
         font-size: 0.9em; 
     }
+    /* --- Index Page Grid --- */
+    .collection-grid {
+        /* Muestra 3 columnas en móvil */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
 
+    .grid-link h4 {
+        font-size: 0.7em; /* Texto más pequeño para no ocupar demasiado */
+    }
     /* --- Animal Pages --- */
     .animal-title {
         font-size: 1.8em;
@@ -515,7 +605,6 @@ a {
     width: 100%;
     height: auto;
     display: block;
-    filter: brightness(0.8); /* Oscurece un poco la imagen para que el texto resalte */
     transition: filter 0.3s;
 }
 
@@ -524,19 +613,16 @@ a {
 }
 
 .reel-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
     padding: 10px 0;
-    color: white; /* Texto blanco para resaltar en la imagen oscura */
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: var(--color-brown); /* Texto principal para un fondo blanco/beige */
+    background: none; /* Quitamos el fondo negro semitransparentee */
 }
 
 .reel-info h4 {
     margin: 0;
     font-size: 1.1em;
-    color: white;
+    color: var(--color-terracotta);/* Título en color de acción */
 }
 
 /* --- ESTILOS DE ETIQUETAS DE ESTADO --- */
