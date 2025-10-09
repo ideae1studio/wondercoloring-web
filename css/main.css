@@ -33,7 +33,7 @@ main {
 /* Headings Consistency */
 h1, h2, h3, h4 {
     font-weight: normal;
-    color: var(--color-brown);
+    color: var(--color-gold);
 }
 
 /* Anchor Link Elegance */
