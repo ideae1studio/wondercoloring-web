@@ -1,67 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lemur - Safari Sparks | WonderColoring</title>
+    <title>Katta - Safari Funken | Wunder Malbuch</title>
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
 
     <header class="navbar">
-        <h1>WonderColoring</h1>
-        <a href="../../index.html">↩️ Back to Collections</a>
+        <div class="brand-container">
+            <div class="brand-visuals">
+                <div class="logo-wrapper">
+                    <img src="../../safari-sparks/assets/img/logo.webp" alt="Wunder Malbuch Logo" class="site-logo">
+                </div>
+                <div class="brand-text">
+                    <h1>Wunder Malbuch</h1>
+                    <p class="slogan">Phantasie wecken, ein Farbton nach dem anderen</p>
+                </div>
+            </div>
+        </div>
+        <a href="home-de.html" class="back-link language-switcher">↩️ Zurück zur Safari Funken Übersicht</a>
     </header>
 
     <main class="animal-page">
-        <h2 class="animal-title">Ring-Tailed Lemur</h2>
+        <a href="home-de.html" class="language-switcher back-link" style="margin-bottom: 20px;">
+            ⬅️ Zurück zur Safari Funken
+        </a>
+        
+        <h2 class="animal-title">Katta (Ringelschwanzlemur)</h2>
         <p class="scientific-name">Lemur catta</p>
 
         <section class="visual-audio">
             <div class="image-container">
-                <img src="../assets/img/lemur.webp" alt="Colored Lemur from WonderColoring" class="animal-image">
+                <img src="../../safari-sparks/assets/img/lemur.webp" alt="Farbiger Katta von WonderColoring" class="animal-image">
             </div>
 
-            <button class="audio-button" id="play-sound-button" onclick="playSound('../assets/audio/lemur.mp3')">
+            <button class="audio-button" id="play-sound-button" onclick="playSound('lemur.mp3')">
                 <span class="icon">🔊</span>
-                <span id="button-text">Listen to the animal sound!</span>
+                <span id="button-text">Höre den Tierlaut!</span>
             </button>
+        
         </section>
 
         <section class="info-section">
-            <h3>Key Characteristics</h3>
+            <h3>Wichtige Merkmale</h3>
             <ul id="caracteristicas-list">
-                <li>"Lemurs are primates (like monkeys) but are only found on the island of Madagascar, nowhere else in the world!</li>
-                <li>They are easily recognized by their long, black-and-white striped tail, which they use for balance and communication.</li>
-                <li>Lemurs love sunbathing! They sit with their arms spread wide to soak up the morning warmth."</li>
+                <li>Lemuren sind Primaten (wie Affen), kommen aber nur auf der Insel Madagaskar vor – nirgendwo sonst auf der Welt!</li>
+                <li>Sie sind leicht an ihrem langen, schwarz-weiß gestreiften Schwanz zu erkennen, den sie zur Balance und Kommunikation nutzen.</li>
+                <li>Lemuren lieben es zu sonnenbaden! Sie sitzen mit weit ausgebreiteten Armen da, um die morgendliche Wärme aufzunehmen.</li>
             </ul>
         </section>
 
         <section class="info-section">
-            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <h3>Besondere Fakten (Spaßige Fakten!)</h3>
             <ul id="hechos-list">
-                <li>Lemur groups are led by the females—a rare thing in the primate world!</li>
-                <li>They have 'stink fights' by rubbing their tail on scent glands and waving their smelly tails at rivals.</li>
-                <li>Lemurs use their long tails to help them jump long distances between branches.</li>
+                <li>Lemurengruppen werden von den Weibchen angeführt – eine Seltenheit in der Primatenwelt!</li>
+                <li>Sie veranstalten „Stinkkämpfe“, indem sie ihren Schwanz an Duftdrüsen reiben und dann mit ihren übelriechenden Schwänzen Rivalen zuwinken.</li>
+                <li>Lemuren nutzen ihre langen Schwänze, um große Entfernungen zwischen Ästen zu überwinden.</li>
             </ul>
         </section>
-        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+        <a href="home-de.html" class="back-link">Entdecke weitere Tiere und Sammlungen</a>
     </main>
 
     <script>
-      /**
-       * Plays the animal's audio file.
-       * @param {string} audioName - The name of the audio file (e.g., 'lemur.mp3').
-       */
-      function playSound(audioName) {
-        // The path is relative to the 'pages' folder, hence the '../'
-        const audio = new Audio(`../assets/audio/${audioName}`);
+    /**
+     * Plays the animal's audio file.
+     * @param {string} audioName - The name of the audio file (e.g., 'lemur.mp3').
+     */
+     function playSound(audioName) {
+        // 🔄 CAMBIO CRÍTICO #2: RUTA DE AUDIO CORREGIDA
+        // La ruta es: Sube dos niveles (../../) hasta la raíz y luego ve a safari-sparks/assets/audio/
+        const audio = new Audio(`../../safari-sparks/assets/audio/${audioName}`);
+        
+        const button = document.getElementById('play-sound-button');
+        const originalText = 'Höre den Tierlaut!';
+        const playingText = 'Spielt...';
+
+        // Cambiar el texto del botón al reproducir
+        document.getElementById('button-text').textContent = playingText;
+        button.disabled = true;
+
         audio.play();
-      }
+
+        // Restaurar el texto del botón al finalizar
+        audio.onended = function() {
+            document.getElementById('button-text').textContent = originalText;
+            button.disabled = false;
+        };
+        // Manejar errores
+        audio.onerror = function() {
+            document.getElementById('button-text').textContent = 'Fehler beim Abspielen';
+            button.disabled = false;
+        };
+    }
     </script>
+    
     <footer>
-        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. Alle Rechte vorbehalten.</p>
     </footer>
-    <script src="../../js/audio-logic.js"></script> 
+
 </body>
 </html>

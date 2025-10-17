@@ -1,67 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hyena - Safari Sparks | WonderColoring</title>
+    <title>Tüpfelhyäne - Safari Funken | Wunder Malbuch</title>
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
 
     <header class="navbar">
-        <h1>WonderColoring</h1>
-        <a href="../../index.html">↩️ Back to Collections</a>
+        <div class="brand-container">
+            <div class="brand-visuals">
+                <div class="logo-wrapper">
+                    <img src="../../safari-sparks/assets/img/logo.webp" alt="Wunder Malbuch Logo" class="site-logo">
+                </div>
+                <div class="brand-text">
+                    <h1>Wunder Malbuch</h1>
+                    <p class="slogan">Phantasie wecken, ein Farbton nach dem anderen</p>
+                </div>
+            </div>
+        </div>
+        <a href="home-de.html" class="back-link language-switcher">↩️ Zurück zur Safari Funken Übersicht</a>
     </header>
 
     <main class="animal-page">
-        <h2 class="animal-title">Spotted Hyena</h2>
+        <a href="home-de.html" class="language-switcher back-link" style="margin-bottom: 20px;">
+            ⬅️ Zurück zur Safari Funken
+        </a>
+        
+        <h2 class="animal-title">Tüpfelhyäne</h2>
         <p class="scientific-name">Crocuta crocuta</p>
 
         <section class="visual-audio">
             <div class="image-container">
-                <img src="../assets/img/hyena.webp" alt="Colored Lion from WonderColoring" class="animal-image">
+                <img src="../../safari-sparks/assets/img/hyena.webp" alt="Farbige Tüpfelhyäne von WonderColoring" class="animal-image">
             </div>
 
-            <button class="audio-button" id="play-sound-button" onclick="playSound('../assets/audio/hyena.mp3')">
+            <button class="audio-button" id="play-sound-button" onclick="playSound('hyena.mp3')">
                 <span class="icon">🔊</span>
-                <span id="button-text">Listen to the animal sound!</span>
+                <span id="button-text">Höre den Tierlaut!</span>
             </button>
+        
         </section>
 
         <section class="info-section">
-            <h3>Key Characteristics</h3>
+            <h3>Wichtige Merkmale</h3>
             <ul id="caracteristicas-list">
-                <li>Hyenas are known for their giggle-like laugh, but this sound usually means they are excited or nervous!</li>
-                <li>They are amazing hunters and catch most of their food themselves, they aren't just scavengers.</li>
-                <li>They live in large, structured groups called 'clans' led by a strong female.</li>
+                <li>Hyänen sind bekannt für ihr kicherndes Lachen, aber dieser Laut bedeutet meist, dass sie aufgeregt oder nervös sind!</li>
+                <li>Sie sind hervorragende Jäger und fangen den Großteil ihrer Beute selbst, sie sind nicht nur Aasfresser.</li>
+                <li>Sie leben in großen, strukturierten Gruppen, sogenannten „Clans“, die von einem starken Weibchen geführt werden.</li>
             </ul>
         </section>
 
         <section class="info-section">
-            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <h3>Besondere Fakten (Spaßige Fakten!)</h3>
             <ul id="hechos-list">
-                <li>A Hyena's jaws are one of the strongest in the animal kingdom—they can crush bones easily!</li>
-                <li>Their front legs are longer than their back legs, giving them a sloped back appearance.</li>
-                <li>Hyenas are excellent communicators, using different calls, postures, and smells to talk to their clan.</li>
+                <li>Die Kiefer einer Hyäne gehören zu den stärksten im Tierreich – sie können Knochen mühelos zermalmen!</li>
+                <li>Ihre Vorderbeine sind länger als ihre Hinterbeine, was ihnen ein abfallendes Rückenprofil verleiht.</li>
+                <li>Hyänen sind ausgezeichnete Kommunikatoren und nutzen verschiedene Laute, Haltungen und Gerüche, um mit ihrem Clan zu sprechen.</li>
             </ul>
         </section>
-        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+        <a href="home-de.html" class="back-link">Entdecke weitere Tiere und Sammlungen</a>
     </main>
 
     <script>
-      /**
-       * Plays the animal's audio file.
-       * @param {string} audioName - The name of the audio file (e.g., 'hyenna.mp3').
-       */
-      function playSound(audioName) {
-        // The path is relative to the 'pages' folder, hence the '../'
-        const audio = new Audio(`../assets/audio/${audioName}`);
+    /**
+     * Plays the animal's audio file.
+     * @param {string} audioName - The name of the audio file (e.g., 'hyena.mp3').
+     */
+     function playSound(audioName) {
+        // 🔄 CAMBIO CRÍTICO #2: RUTA DE AUDIO CORREGIDA
+        // La ruta es: Sube dos niveles (../../) hasta la raíz y luego ve a safari-sparks/assets/audio/
+        const audio = new Audio(`../../safari-sparks/assets/audio/${audioName}`);
+        
+        const button = document.getElementById('play-sound-button');
+        const originalText = 'Höre den Tierlaut!';
+        const playingText = 'Spielt...';
+
+        // Cambiar el texto del botón al reproducir
+        document.getElementById('button-text').textContent = playingText;
+        button.disabled = true;
+
         audio.play();
-      }
+
+        // Restaurar el texto del botón al finalizar
+        audio.onended = function() {
+            document.getElementById('button-text').textContent = originalText;
+            button.disabled = false;
+        };
+        // Manejar errores
+        audio.onerror = function() {
+            document.getElementById('button-text').textContent = 'Fehler beim Abspielen';
+            button.disabled = false;
+        };
+    }
     </script>
-     <footer>
-        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    
+    <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. Alle Rechte vorbehalten.</p>
     </footer>
-    <script src="../../js/audio-logic.js"></script> 
+
 </body>
 </html>

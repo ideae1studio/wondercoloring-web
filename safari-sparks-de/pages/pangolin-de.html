@@ -1,67 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pangolin - Safari Sparks | WonderColoring</title>
+    <title>Schuppentier - Safari Funken | Wunder Malbuch</title>
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
 
     <header class="navbar">
-        <h1>WonderColoring</h1>
-        <a href="../../index.html">↩️ Back to Collections</a>
+        <div class="brand-container">
+            <div class="brand-visuals">
+                <div class="logo-wrapper">
+                    <img src="../../safari-sparks/assets/img/logo.webp" alt="Wunder Malbuch Logo" class="site-logo">
+                </div>
+                <div class="brand-text">
+                    <h1>Wunder Malbuch</h1>
+                    <p class="slogan">Phantasie wecken, ein Farbton nach dem anderen</p>
+                </div>
+            </div>
+        </div>
+        <a href="home-de.html" class="back-link language-switcher">↩️ Zurück zur Safari Funken Übersicht</a>
     </header>
 
     <main class="animal-page">
-        <h2 class="animal-title">Pangolin</h2>
+        <a href="home-de.html" class="language-switcher back-link" style="margin-bottom: 20px;">
+            ⬅️ Zurück zur Safari Funken
+        </a>
+        
+        <h2 class="animal-title">Schuppentier</h2>
         <p class="scientific-name">Manis spp</p>
 
         <section class="visual-audio">
             <div class="image-container">
-                <img src="../assets/img/pangolin.webp" alt="Colored Pangolin from WonderColoring" class="animal-image">
+                <img src="../../safari-sparks/assets/img/pangolin.webp" alt="Farbiger Schuppentier von WonderColoring" class="animal-image">
             </div>
 
-            <button class="audio-button" id="play-sound-button" onclick="playSound('../assets/audio/pangolin.mp3')">
+            <button class="audio-button" id="play-sound-button" onclick="playSound('pangolin.mp3')">
                 <span class="icon">🔊</span>
-                <span id="button-text">Listen to the animal sound!</span>
+                <span id="button-text">Höre den Tierlaut!</span>
             </button>
+        
         </section>
 
         <section class="info-section">
-            <h3>Key Characteristics</h3>
+            <h3>Wichtige Merkmale</h3>
             <ul id="caracteristicas-list">
-                <li>Pangolins are the only mammals covered completely in large, hard scales made of keratin (the same stuff as your fingernails!)</li>
-                <li>When scared, they curl up into a tight, armored ball—a perfect defense against predators like lions.</li>
-                <li>They have incredibly long, sticky tongues that can be longer than their body, used to slurp up ants and termites.</li>
+                <li>Schuppentiere sind die einzigen Säugetiere, die vollständig mit großen, harten Schuppen aus Keratin bedeckt sind (dem gleichen Material wie deine Fingernägel!)</li>
+                <li>Wenn sie Angst haben, rollen sie sich zu einer festen, gepanzerten Kugel zusammen – ein perfekter Schutz gegen Raubtiere wie Löwen.</li>
+                <li>Sie haben unglaublich lange, klebrige Zungen, die länger als ihr Körper sein können, um Ameisen und Termiten aufzuschlecken.</li>
             </ul>
         </section>
 
         <section class="info-section">
-            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <h3>Besondere Fakten (Spaßige Fakten!)</h3>
             <ul id="hechos-list">
-                <li>Sadly, Pangolins are the most trafficked mammal in the world, meaning they are very endangered.</li>
-                <li>A Pangolin's tongue attaches to its ribcage, not its throat, which is super unique!</li>
-                <li>They have no teeth and rely on stones and sand in their stomachs to grind up their food.</li>
+                <li>Leider sind Schuppentiere die am meisten gehandelten Säugetiere der Welt, was sie stark gefährdet macht.</li>
+                <li>Die Zunge eines Schuppentiers ist am Brustkorb befestigt, nicht am Hals, was super einzigartig ist!</li>
+                <li>Sie haben keine Zähne und zermahlen ihre Nahrung mit Steinen und Sand in ihrem Magen.</li>
             </ul>
         </section>
-        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+        <a href="home-de.html" class="back-link">Entdecke weitere Tiere und Sammlungen</a>
     </main>
 
     <script>
-      /**
-       * Plays the animal's audio file.
-       * @param {string} audioName - The name of the audio file (e.g., 'pangolin.mp3').
-       */
-      function playSound(audioName) {
-        // The path is relative to the 'pages' folder, hence the '../'
-        const audio = new Audio(`../assets/audio/${audioName}`);
+    /**
+     * Plays the animal's audio file.
+     * @param {string} audioName - The name of the audio file (e.g., 'pangolin.mp3').
+     */
+     function playSound(audioName) {
+        // 🔄 CAMBIO CRÍTICO #2: RUTA DE AUDIO CORREGIDA
+        // La ruta es: Sube dos niveles (../../) hasta la raíz y luego ve a safari-sparks/assets/audio/
+        const audio = new Audio(`../../safari-sparks/assets/audio/${audioName}`);
+        
+        const button = document.getElementById('play-sound-button');
+        const originalText = 'Höre den Tierlaut!';
+        const playingText = 'Spielt...';
+
+        // Cambiar el texto del botón al reproducir
+        document.getElementById('button-text').textContent = playingText;
+        button.disabled = true;
+
         audio.play();
-      }
+
+        // Restaurar el texto del botón al finalizar
+        audio.onended = function() {
+            document.getElementById('button-text').textContent = originalText;
+            button.disabled = false;
+        };
+        // Manejar errores
+        audio.onerror = function() {
+            document.getElementById('button-text').textContent = 'Fehler beim Abspielen';
+            button.disabled = false;
+        };
+    }
     </script>
-     <footer>
-        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    
+    <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. Alle Rechte vorbehalten.</p>
     </footer>
-    <script src="../../js/audio-logic.js"></script> 
+
 </body>
 </html>

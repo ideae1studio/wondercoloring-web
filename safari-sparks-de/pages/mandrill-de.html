@@ -1,67 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mandrill - Safari Sparks | WonderColoring</title>
+    <title>Mandrill - Safari Funken | Wunder Malbuch</title>
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
 
     <header class="navbar">
-        <h1>WonderColoring</h1>
-        <a href="../../index.html">↩️ Back to Collections</a>
+        <div class="brand-container">
+            <div class="brand-visuals">
+                <div class="logo-wrapper">
+                    <img src="../../safari-sparks/assets/img/logo.webp" alt="Wunder Malbuch Logo" class="site-logo">
+                </div>
+                <div class="brand-text">
+                    <h1>Wunder Malbuch</h1>
+                    <p class="slogan">Phantasie wecken, ein Farbton nach dem anderen</p>
+                </div>
+            </div>
+        </div>
+        <a href="home-de.html" class="back-link language-switcher">↩️ Zurück zur Safari Funken Übersicht</a>
     </header>
 
     <main class="animal-page">
+        <a href="home-de.html" class="language-switcher back-link" style="margin-bottom: 20px;">
+            ⬅️ Zurück zur Safari Funken
+        </a>
+        
         <h2 class="animal-title">Mandrill</h2>
         <p class="scientific-name">Mandrillus sphinx</p>
 
         <section class="visual-audio">
             <div class="image-container">
-                <img src="../assets/img/mandrill.webp" alt="Colored Mandrill from WonderColoring" class="animal-image">
+                <img src="../../safari-sparks/assets/img/mandrill.webp" alt="Farbiger Mandrill von WonderColoring" class="animal-image">
             </div>
 
-            <button class="audio-button" id="play-sound-button" onclick="playSound('../assets/audio/mandrill.mp3')">
+            <button class="audio-button" id="play-sound-button" onclick="playSound('mandrill.mp3')">
                 <span class="icon">🔊</span>
-                <span id="button-text">Listen to the animal sound!</span>
+                <span id="button-text">Höre den Tierlaut!</span>
             </button>
+        
         </section>
 
         <section class="info-section">
-            <h3>Key Characteristics</h3>
+            <h3>Wichtige Merkmale</h3>
             <ul id="caracteristicas-list">
-                <li>TMandrills are famous for having the most colorful face of any mammal, with bright blue, red, and white markings!</li>
-                <li>They are the largest species of monkey in the world and are very powerful.</li>
-                <li>Mandrills live in huge groups called 'hordes,' which can sometimes have hundreds of individuals.</li>
+                <li>Mandrills sind berühmt für ihr farbenfrohes Gesicht, das bunteste aller Säugetiere, mit leuchtend blauen, roten und weißen Markierungen!</li>
+                <li>Sie sind die größte Affenart der Welt und sehr kräftig.</li>
+                <li>Mandrills leben in riesigen Gruppen, sogenannten „Horden“, die manchmal Hunderte von Tieren umfassen können.</li>
             </ul>
         </section>
 
         <section class="info-section">
-            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <h3>Besondere Fakten (Spaßige Fakten!)</h3>
             <ul id="hechos-list">
-                <li>The colors on a Mandrill's face and rear are actually a form of camouflage in the dark rainforest undergrowth.</li>
-                <li>Males use their bright colors to show off their strength and health to females and other males.</li>
-                <li>Mandrills are omnivores, eating everything from fruits and seeds to insects and small reptiles.</li>
+                <li>Die Farben auf dem Gesicht und Hinterteil eines Mandrills dienen tatsächlich als Tarnung im dunklen Regenwaldunterholz.</li>
+                <li>Männchen nutzen ihre leuchtenden Farben, um Weibchen und anderen Männchen ihre Stärke und Gesundheit zu zeigen.</li>
+                <li>Mandrills sind Allesfresser und essen alles, von Früchten und Samen bis hin zu Insekten und kleinen Reptilien.</li>
             </ul>
         </section>
-        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+        <a href="home-de.html" class="back-link">Entdecke weitere Tiere und Sammlungen</a>
     </main>
 
     <script>
-      /**
-       * Plays the animal's audio file.
-       * @param {string} audioName - The name of the audio file (e.g., 'mandrill.mp3').
-       */
-      function playSound(audioName) {
-        // The path is relative to the 'pages' folder, hence the '../'
-        const audio = new Audio(`../assets/audio/${audioName}`);
+    /**
+     * Plays the animal's audio file.
+     * @param {string} audioName - The name of the audio file (e.g., 'mandrill.mp3').
+     */
+     function playSound(audioName) {
+        // 🔄 CAMBIO CRÍTICO #2: RUTA DE AUDIO CORREGIDA
+        // La ruta es: Sube dos niveles (../../) hasta la raíz y luego ve a safari-sparks/assets/audio/
+        const audio = new Audio(`../../safari-sparks/assets/audio/${audioName}`);
+        
+        const button = document.getElementById('play-sound-button');
+        const originalText = 'Höre den Tierlaut!';
+        const playingText = 'Spielt...';
+
+        // Cambiar el texto del botón al reproducir
+        document.getElementById('button-text').textContent = playingText;
+        button.disabled = true;
+
         audio.play();
-      }
+
+        // Restaurar el texto del botón al finalizar
+        audio.onended = function() {
+            document.getElementById('button-text').textContent = originalText;
+            button.disabled = false;
+        };
+        // Manejar errores
+        audio.onerror = function() {
+            document.getElementById('button-text').textContent = 'Fehler beim Abspielen';
+            button.disabled = false;
+        };
+    }
     </script>
-     <footer>
-        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    
+    <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. Alle Rechte vorbehalten.</p>
     </footer>
-    <script src="../../js/audio-logic.js"></script> 
+
 </body>
 </html>
