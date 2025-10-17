@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meerkat - Safari Sparks | WonderColoring</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>WonderColoring</h1>
+        <a href="../../index.html">↩️ Back to Collections</a>
+    </header>
+
+    <main class="animal-page">
+        <h2 class="animal-title">Meerkat</h2>
+        <p class="scientific-name">Suricata suricatta</p>
+
+        <section class="visual-audio">
+            <div class="image-container">
+                <img src="../assets/img/meerkat.webp" alt="Colored Meerkat from WonderColoring" class="animal-image">
+            </div>
+
+            <button class="audio-button" id="play-sound-button" onclick="playSound('../assets/audio/meerkat.mp3')">
+                <span class="icon">🔊</span>
+                <span id="button-text">Listen to the animal sound!</span>
+            </button>
+        </section>
+
+        <section class="info-section">
+            <h3>Key Characteristics</h3>
+            <ul id="caracteristicas-list">
+                <li>Meerkats live in groups called 'mobs' or 'gangs' and work together to survive.</li>
+                <li>They take turns standing tall as a 'sentry' or lookout to watch for danger, like eagles.</li>
+                <li>They teach their babies how to hunt scorpions and other creepy crawlies safely.</li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <ul id="hechos-list">
+                <li>When they get cold, meerkats sunbathe! They stand on their hind legs and face the sun to warm up their tummies.</li>
+                <li>Their black eye patches act like sunglasses, helping them see clearly in the bright desert sun.</li>
+                <li>A meerkat den can have many entrances and tunnels, almost like an underground castle!<li>
+            </ul>
+        </section>
+        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+    </main>
+
+    <script>
+      /**
+       * Plays the animal's audio file.
+       * @param {string} audioName - The name of the audio file (e.g., 'meerkat.mp3').
+       */
+      function playSound(audioName) {
+        // The path is relative to the 'pages' folder, hence the '../'
+        const audio = new Audio(`../assets/audio/${audioName}`);
+        audio.play();
+      }
+    </script>
+     <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    </footer>
+    <script src="../../js/audio-logic.js"></script> 
+</body>
+</html>

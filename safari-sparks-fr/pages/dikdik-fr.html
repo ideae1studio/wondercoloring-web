@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dikdik - Safari Sparks | WonderColoring</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>WonderColoring</h1>
+        <a href="../../index.html">↩️ Back to Collections</a>
+    </header>
+
+    <main class="animal-page">
+        <h2 class="animal-title">Dik - Dik</h2>
+        <p class="scientific-name">Madoqua spp</p>
+
+        <section class="visual-audio">
+            <div class="image-container">
+                <img src="../assets/img/dikdik.webp" alt="Colored Dik - Dik from WonderColoring" class="animal-image">
+            </div>
+
+            <button class="audio-button" id="play-sound-button" onclick="playSound('../assets/audio/dikdik.mp3')">
+                <span class="icon">🔊</span>
+                <span id="button-text">Listen to the animal sound!</span>
+            </button>
+        </section>
+
+        <section class="info-section">
+            <h3>Key Characteristics</h3>
+            <ul id="caracteristicas-list">
+                <li>he Dik-Dik is one of the smallest antelopes in Africa, usually only about 12-16 inches tall—about the size of a rabbit!</li>
+                <li>They are named for the distinctive 'zik-zik' or 'dik-dik' alarm sound they make when they feel scared.</li>
+                <li>Dik-Diks are monogamous, meaning they mate for life and live in small pairs.</li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <ul id="hechos-list">
+                <li>They use tear glands near their eyes to mark their territory with a scent.</li>
+                <li>They are so tiny that sometimes they can be mistaken for baby animals, but they are fully grown!</li>
+                <li>Dik-Diks rarely need to drink water, as they get most of their hydration from the leaves and berries they eat.</li>
+            </ul>
+        </section>
+        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+    </main>
+
+    <script>
+      /**
+       * Plays the animal's audio file.
+       * @param {string} audioName - The name of the audio file (e.g., 'dikdik.mp3').
+       */
+      function playSound(audioName) {
+        // The path is relative to the 'pages' folder, hence the '../'
+        const audio = new Audio(`../assets/audio/${audioName}`);
+        audio.play();
+      }
+    </script>
+     <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    </footer>
+    <script src="../../js/audio-logic.js"></script> 
+</body>
+</html>

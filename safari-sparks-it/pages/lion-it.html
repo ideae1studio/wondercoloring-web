@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King of the Jungle - Safari Sparks | WonderColoring</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>WonderColoring</h1>
+        <a href="../../index.html">↩️ Back to Collections</a>
+    </header>
+
+    <main class="animal-page">
+        <h2 class="animal-title">African Lion</h2>
+        <p class="scientific-name">Panthera leo</p>
+
+        <section class="visual-audio">
+            <div class="image-container">
+                <img src="../assets/img/lion.webp" alt="Colored Lion from WonderColoring" class="animal-image">
+            </div>
+
+            <button class="audio-button" id="play-sound-button" onclick="playSound('../assets/audio/lion.mp3')">
+                <span class="icon">🔊</span>
+                <span id="button-text">Listen to the animal sound!</span>
+            </button>
+        </section>
+
+        <section class="info-section">
+            <h3>Key Characteristics</h3>
+            <ul id="caracteristicas-list">
+                <li>They are the only cats that live in groups called prides.</li>
+                <li>Male lions have manes, while females do not.</li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <ul id="hechos-list">
+                <li>A lion's roar can be heard up to 5 miles (8 km) away.</li>
+                <li>They spend most of the day sleeping or resting (up to 20 hours).</li>
+            </ul>
+        </section>
+        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+    </main>
+
+    <script>
+      /**
+       * Plays the animal's audio file.
+       * @param {string} audioName - The name of the audio file (e.g., 'lion.mp3').
+       */
+      function playSound(audioName) {
+        // The path is relative to the 'pages' folder, hence the '../'
+        const audio = new Audio(`../assets/audio/${audioName}`);
+        audio.play();
+      }
+    </script>
+     <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    </footer>
+    <script src="../../js/audio-logic.js"></script> 
+</body>
+</html>

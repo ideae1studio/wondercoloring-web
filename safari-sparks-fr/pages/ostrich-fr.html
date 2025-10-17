@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ostrich - Safari Sparks | WonderColoring</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>WonderColoring</h1>
+        <a href="../../index.html">↩️ Back to Collections</a>
+    </header>
+
+    <main class="animal-page">
+        <h2 class="animal-title">Ostrich</h2>
+        <p class="scientific-name">Struthio camelus</p>
+
+        <section class="visual-audio">
+            <div class="image-container">
+                <img src="../assets/img/ostrich.webp" alt="Colored Ostrich from WonderColoring" class="animal-image">
+            </div>
+
+            <button class="audio-button" id="play-sound-button" onclick="playSound('../assets/audio/ostrich.mp3')">
+                <span class="icon">🔊</span>
+                <span id="button-text">Listen to the animal sound!</span>
+            </button>
+        </section>
+
+        <section class="info-section">
+            <h3>Key Characteristics</h3>
+            <ul id="caracteristicas-list">
+                <li>The Ostrich is the world's largest and heaviest bird, but it cannot fly!</li>
+                <li>Instead of flying, they are amazing runners, using their large, powerful legs to escape danger.</li>
+                <li>They have only two toes on each foot—perfect for high-speed running on the African plains.</li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <h3>Peculiar Facts (Fun Facts!)</h3>
+            <ul id="hechos-list">
+                <li>Ostriches can run up to 43 mph (70 km/h)—that's faster than most cars are allowed to drive in a neighborhood!</li>
+                <li>Their eyes are the largest of any land animal, helping them spot predators from far away.</li>
+                <li>An Ostrich egg is the largest egg in the world, and it takes about 40 minutes to hard-boil one!</li>
+            </ul>
+        </section>
+        <a href="../../index.html" class="back-link">Explore Other Animals and Collections</a>
+    </main>
+
+    <script>
+      /**
+       * Plays the animal's audio file.
+       * @param {string} audioName - The name of the audio file (e.g., 'ostrich.mp3').
+       */
+      function playSound(audioName) {
+        // The path is relative to the 'pages' folder, hence the '../'
+        const audio = new Audio(`../assets/audio/${audioName}`);
+        audio.play();
+      }
+    </script>
+     <footer>
+        <p style="text-align: center; font-size: 0.8em; margin-top: 50px; color: var(--color-taupe);">&copy; 2025 Ideae. All rights reserved.</p>
+    </footer>
+    <script src="../../js/audio-logic.js"></script> 
+</body>
+</html>
